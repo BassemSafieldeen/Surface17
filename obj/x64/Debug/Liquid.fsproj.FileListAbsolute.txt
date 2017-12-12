@@ -1,0 +1,10 @@
+C:\Liquid\Liquid\source\bin\Debug\Liquid.exe.config
+C:\Liquid\Liquid\source\bin\Debug\LiquidAzure.XML
+C:\Liquid\Liquid\source\bin\Debug\Liquid.exe
+C:\Liquid\Liquid\source\bin\Debug\Liquid.pdb
+C:\Liquid\Liquid\source\bin\Debug\FSharp.Core.dll
+C:\Liquid\Liquid\source\bin\Debug\Liquid1.dll
+C:\Liquid\Liquid\source\bin\Debug\Liquid1.xml
+C:\Liquid\Liquid\source\obj\x64\Debug\Liquid.fsproj.CoreCompileInputs.cache
+C:\Liquid\Liquid\source\obj\x64\Debug\Liquid.exe
+C:\Liquid\Liquid\source\obj\x64\Debug\Liquid.pdb
