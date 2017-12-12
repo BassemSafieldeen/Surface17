@@ -576,24 +576,7 @@
 0:0000.0/Writing: Test.tex (split=50.00% scale=70.00%)
 0:0000.0/     Doing columns:  0 - 35
 0:0000.0/     Doing columns: 35 - 68
-0:0000.0/Syndrome measurements: 0 1 0 1 1 0 0 0
-0:0000.0/Syndrome measurements: 0 1 0 1 1 0 0 0
-0:0000.0/Syndrome measurements: 0 1 0 1 1 0 0 0
-0:0000.1/Syndrome measurements: 0 1 0 1 1 0 0 0
-0:0000.1/Syndrome measurements: 0 1 0 1 1 0 0 0
-0:0000.1/Syndrome measurements: 0 1 0 1 1 0 0 0
-0:0000.1/Syndrome measurements: 0 1 0 1 1 0 0 0
-0:0000.1/Syndrome measurements: 0 1 0 1 1 0 0 0
-0:0000.1/Syndrome measurements: 0 1 0 1 1 0 0 0
-0:0000.1/Syndrome measurements: 0 1 0 1 1 0 0 0
-0:0000.1/Syndrome measurements: 0 1 0 1 1 0 0 0
-0:0000.1/Logical Z (?)
-0:0000.1/Syndrome measurements: 1 1 0 1 1 0 0 1
-0:0000.2/Syndrome measurements: 1 1 0 1 1 0 0 1
-0:0000.2/Syndrome measurements: 1 1 0 1 1 0 0 1
-0:0000.2/Syndrome measurements: 1 1 0 1 1 0 0 1
-0:0000.2/Syndrome measurements: 1 1 0 1 1 0 0 1
-0:0000.2/Syndrome measurements: 1 1 0 1 1 0 0 1
-0:0000.2/Syndrome measurements: 1 1 0 1 1 0 0 1
-0:0000.2/Syndrome measurements: 1 1 0 1 1 0 0 1
-0:0000.2/Syndrome measurements: 1 1 0 1 1 0 0 1
+0:0000.1/Syndrome measurements: 0 1 0 0 1 1 1 1
+0:0000.1/Syndrome measurements: 0 1 0 0 1 1 1 1
+0:0000.1/Syndrome measurements: 0 1 0 0 1 1 1 1
+0:0000.1/Syndrome measurements: 0 1 0 0 1 1 1 1
