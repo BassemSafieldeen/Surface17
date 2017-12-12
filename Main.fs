@@ -228,41 +228,61 @@ module UserSample =
 
     [<LQD>]
     let __Surface_17() =
-        let surface           = Ket(17).Reset(17)
-        //Rpauli (Math.PI/4.) Y surface.[8..8]; //CNOT [surface.[8]; surface.[6]]; CNOT [surface.[8]; surface.[10]]; SWAP [surface.[2]; surface.[6]]; SWAP [surface.[10]; surface.[14]];  //trying state injection (could be working)
+        let stats                  = Array.create 2 0
+        for j in 0..20 do  //this loop is here because I am testing simple tomography on the decoded logical state
+            let surface           = Ket(17).Reset(17)
+            Rpauli (Math.PI/4.) Y surface.[8..8]; CNOT [surface.[8]; surface.[6]]; CNOT [surface.[8]; surface.[10]]; SWAP [surface.[2]; surface.[6]]; SWAP [surface.[10]; surface.[14]];  //trying state injection (could be working)
 
-  (*      let stat              = Array.create 2 0
-        for i in 0..50 do
-            Rpauli (Math.PI/4.) Y surface.[8..8]; //CNOT [surface.[8]; surface.[6]]; CNOT [surface.[8]; surface.[10]]; SWAP [surface.[2]; surface.[6]]; SWAP [surface.[10]; surface.[14]];  //trying state injection (could be working)
-            M surface.[8..8]
-            stat.[0 + surface.[8].Bit.v] <- stat.[0 + surface.[8].Bit.v] + 1 
-            show "stats: Zeros=%d Ones=%d" stat.[0] stat.[1]
-            Reset Zero [surface.[8]];   *)
+      (*      let stat              = Array.create 2 0
+            for i in 0..50 do
+                Rpauli (Math.PI/4.) Y surface.[8..8]; //CNOT [surface.[8]; surface.[6]]; CNOT [surface.[8]; surface.[10]]; SWAP [surface.[2]; surface.[6]]; SWAP [surface.[10]; surface.[14]];  //trying state injection (could be working)
+                M surface.[8..8]
+                stat.[0 + surface.[8].Bit.v] <- stat.[0 + surface.[8].Bit.v] + 1 
+                show "stats: Zeros=%d Ones=%d" stat.[0] stat.[1]
+                Reset Zero [surface.[8]];   *)
 
-        let circ        = Circuit.Compile Stabilize3 surface
-        circ.Dump()
-        circ.RenderHT("Test")
-(*        let circ2       = Circuit.Compile test surface
-        for i in 0..999 do
-            circ2.Run surface
-            show "test: %d %d %d" surface.[0].Bit.v surface.[1].Bit.v surface.[2].Bit.v
-            Restore [surface.[0]]
-            Restore [surface.[1]]
-            Restore [surface.[2]] *)
+            let circ        = Circuit.Compile Stabilize3 surface
+            circ.Dump()
+            circ.RenderHT("Test")
+    (*        let circ2       = Circuit.Compile test surface
+            for i in 0..999 do
+                circ2.Run surface
+                show "test: %d %d %d" surface.[0].Bit.v surface.[1].Bit.v surface.[2].Bit.v
+                Restore [surface.[0]]
+                Restore [surface.[1]]
+                Restore [surface.[2]] *)
 
-        for i in 0..999 do
-            circ.Run surface
-            show "Syndrome measurements: %d %d %d %d %d %d %d %d" surface.[0].Bit.v surface.[4].Bit.v surface.[5].Bit.v surface.[6].Bit.v surface.[10].Bit.v surface.[11].Bit.v surface.[12].Bit.v surface.[16].Bit.v
-            Reset Zero [surface.[0]]; Reset Zero [surface.[4]]; Reset Zero [surface.[5]]; Reset Zero [surface.[6]]; Reset Zero [surface.[10]]; Reset Zero [surface.[11]]; Reset Zero [surface.[12]]; Reset Zero [surface.[16]];
-            if i=10 then
-                show "Logical H"
-                H surface.[1..1]; H surface.[2..2]; H surface.[3..3]; H surface.[7..7]; H surface.[8..8]; H surface.[9..9]; H surface.[13..13]; H surface.[14..14]; H surface.[15..15];
+            for i in 0..5 do
+                circ.Run surface
+                if i <> 5 then   //this condition is here because at the last step we need to do decoding
+                    show "Syndrome measurements: %d %d %d %d %d %d %d %d" surface.[0].Bit.v surface.[4].Bit.v surface.[5].Bit.v surface.[6].Bit.v surface.[10].Bit.v surface.[11].Bit.v surface.[12].Bit.v surface.[16].Bit.v
+                    Reset Zero [surface.[0]]; Reset Zero [surface.[4]]; Reset Zero [surface.[5]]; Reset Zero [surface.[6]]; Reset Zero [surface.[10]]; Reset Zero [surface.[11]]; Reset Zero [surface.[12]]; Reset Zero [surface.[16]];
+                if i=2 then
+                    show "__"
+
+                    //show "Logical H"
+                    //H surface.[1..1]; H surface.[2..2]; H surface.[3..3]; H surface.[7..7]; H surface.[8..8]; H surface.[9..9]; H surface.[13..13]; H surface.[14..14]; H surface.[15..15];
                 
-                //show "Logical Z"
-                //Z surface.[2..2]; Z surface.[8..8]; Z surface.[14..14];
+                    //show "Logical Z"
+                    //Z surface.[2..2]; Z surface.[8..8]; Z surface.[14..14];
 
-                //show "Logical X"
-                //X surface.[7..7]; X surface.[8..8]; X surface.[9..9];
+                    //show "Logical X"
+                    //X surface.[7..7]; X surface.[8..8]; X surface.[9..9];
+
+            //Decoding the logical State
+            show "Decoding the Logical State"
+            show "MA3 = %d and MA4 = %d" surface.[6].Bit.v surface.[10].Bit.v
+            M surface.[1..1]; M surface.[15..15];
+            show "MD0 = %d and MD8 = %d" surface.[1].Bit.v surface.[15].Bit.v
+            if ((surface.[6].Bit.v + surface.[10].Bit.v + surface.[1].Bit.v + surface.[15].Bit.v)%2) = 0 then
+                show "No X needed"
+            else 
+                show "X needed"
+                X surface.[8..8]
+
+            M surface.[8..8]
+            stats.[0 + surface.[8].Bit.v] <- stats.[0 + surface.[8].Bit.v] + 1; 
+            show "stats: Zeros = %d   and Ones = %d" stats.[0] stats.[1]
 
 module Main =
     open App
