@@ -229,7 +229,16 @@ module UserSample =
     [<LQD>]
     let __Surface_17() =
         let surface           = Ket(17).Reset(17)
-       // Rpauli (Math.PI/4.) Z surface.[8..8]; CNOT [surface.[8]; surface.[6]]; CNOT [surface.[8]; surface.[10]]; SWAP [surface.[2]; surface.[6]]; SWAP [surface.[10]; surface.[14]];  //trying state injection (could be working)
+        //Rpauli (Math.PI/4.) Y surface.[8..8]; //CNOT [surface.[8]; surface.[6]]; CNOT [surface.[8]; surface.[10]]; SWAP [surface.[2]; surface.[6]]; SWAP [surface.[10]; surface.[14]];  //trying state injection (could be working)
+
+  (*      let stat              = Array.create 2 0
+        for i in 0..50 do
+            Rpauli (Math.PI/4.) Y surface.[8..8]; //CNOT [surface.[8]; surface.[6]]; CNOT [surface.[8]; surface.[10]]; SWAP [surface.[2]; surface.[6]]; SWAP [surface.[10]; surface.[14]];  //trying state injection (could be working)
+            M surface.[8..8]
+            stat.[0 + surface.[8].Bit.v] <- stat.[0 + surface.[8].Bit.v] + 1 
+            show "stats: Zeros=%d Ones=%d" stat.[0] stat.[1]
+            Reset Zero [surface.[8]];   *)
+
         let circ        = Circuit.Compile Stabilize3 surface
         circ.Dump()
         circ.RenderHT("Test")

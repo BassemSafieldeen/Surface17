@@ -1,4 +1,55 @@
 0:0000.0/=============== Logging to: Liquid.log opened ================
+0:0000.0/stats: Zeros=1 Ones=0
+0:0000.0/stats: Zeros=2 Ones=0
+0:0000.0/stats: Zeros=2 Ones=1
+0:0000.0/stats: Zeros=3 Ones=1
+0:0000.0/stats: Zeros=4 Ones=1
+0:0000.0/stats: Zeros=5 Ones=1
+0:0000.0/stats: Zeros=6 Ones=1
+0:0000.0/stats: Zeros=7 Ones=1
+0:0000.0/stats: Zeros=8 Ones=1
+0:0000.0/stats: Zeros=9 Ones=1
+0:0000.0/stats: Zeros=10 Ones=1
+0:0000.0/stats: Zeros=11 Ones=1
+0:0000.0/stats: Zeros=12 Ones=1
+0:0000.0/stats: Zeros=13 Ones=1
+0:0000.0/stats: Zeros=13 Ones=2
+0:0000.0/stats: Zeros=14 Ones=2
+0:0000.0/stats: Zeros=14 Ones=3
+0:0000.0/stats: Zeros=15 Ones=3
+0:0000.0/stats: Zeros=16 Ones=3
+0:0000.0/stats: Zeros=17 Ones=3
+0:0000.0/stats: Zeros=18 Ones=3
+0:0000.0/stats: Zeros=19 Ones=3
+0:0000.0/stats: Zeros=20 Ones=3
+0:0000.0/stats: Zeros=21 Ones=3
+0:0000.0/stats: Zeros=22 Ones=3
+0:0000.0/stats: Zeros=22 Ones=4
+0:0000.0/stats: Zeros=23 Ones=4
+0:0000.0/stats: Zeros=24 Ones=4
+0:0000.0/stats: Zeros=24 Ones=5
+0:0000.0/stats: Zeros=24 Ones=6
+0:0000.0/stats: Zeros=25 Ones=6
+0:0000.0/stats: Zeros=26 Ones=6
+0:0000.0/stats: Zeros=27 Ones=6
+0:0000.0/stats: Zeros=27 Ones=7
+0:0000.0/stats: Zeros=28 Ones=7
+0:0000.0/stats: Zeros=29 Ones=7
+0:0000.0/stats: Zeros=30 Ones=7
+0:0000.0/stats: Zeros=31 Ones=7
+0:0000.0/stats: Zeros=32 Ones=7
+0:0000.0/stats: Zeros=33 Ones=7
+0:0000.0/stats: Zeros=34 Ones=7
+0:0000.0/stats: Zeros=35 Ones=7
+0:0000.0/stats: Zeros=36 Ones=7
+0:0000.0/stats: Zeros=37 Ones=7
+0:0000.0/stats: Zeros=37 Ones=8
+0:0000.0/stats: Zeros=38 Ones=8
+0:0000.0/stats: Zeros=39 Ones=8
+0:0000.0/stats: Zeros=39 Ones=9
+0:0000.0/stats: Zeros=40 Ones=9
+0:0000.0/stats: Zeros=41 Ones=9
+0:0000.0/stats: Zeros=42 Ones=9
 0:0000.0/SEQ
 0:0000.0/  Extend
 0:0000.0/    GATE RpY:-1.571 is a Rotation of Pauli  (Modify(0)) P
@@ -576,7 +627,4 @@
 0:0000.0/Writing: Test.tex (split=50.00% scale=70.00%)
 0:0000.0/     Doing columns:  0 - 35
 0:0000.0/     Doing columns: 35 - 68
-0:0000.1/Syndrome measurements: 0 1 0 0 1 1 1 1
-0:0000.1/Syndrome measurements: 0 1 0 0 1 1 1 1
-0:0000.1/Syndrome measurements: 0 1 0 0 1 1 1 1
-0:0000.1/Syndrome measurements: 0 1 0 0 1 1 1 1
+0:0000.0/Syndrome measurements: 1 0 1 0 1 0 0 0
