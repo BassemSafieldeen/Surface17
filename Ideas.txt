@@ -1,4 +1,4 @@
-Ideas and questions: 
+Ideas and questions: Hi
 
 1- Multiple logical qubits in surface17 using the patches idea from "The surface code with a twist" [No-G0...surface-17 has just enough distance for one logical qubit]
 2- What are magic states?
