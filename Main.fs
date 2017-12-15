@@ -117,7 +117,7 @@ module UserSample =
         X qs
         M qs.[0..0]
         M qs.[1..1]
-        M qs.[2..2]   *)
+        M qs.[2..2]   *)  // Comment
 
     let Stabilize2(qs:Qubits) =
         //Xs
@@ -224,6 +224,57 @@ module UserSample =
         M qs.[10..10]
         M qs.[12..12]
 
+        
+    let Stabilize4(qs:Qubits) =
+        H >< qs
+        //Xs
+        //top right
+        CZ [qs.[2]; qs.[5]]
+        CZ [qs.[9]; qs.[11]]
+        CZ [qs.[14]; qs.[16]]
+        //top left
+        CZ [qs.[1]; qs.[5]]
+        CZ [qs.[8]; qs.[11]]
+        CZ [qs.[13]; qs.[16]]
+        //bottom right
+        CZ [qs.[8]; qs.[5]]
+        CZ [qs.[15]; qs.[11]]
+        CZ [qs.[3]; qs.[0]]
+        //bottom left
+        CZ [qs.[7]; qs.[5]]
+        CZ [qs.[14]; qs.[11]]
+        CZ [qs.[2]; qs.[0]]
+
+        //Zs
+        //top right
+        CZ [qs.[1]; qs.[4]]
+        CZ [qs.[3]; qs.[6]]
+        CZ [qs.[8]; qs.[10]]
+        //bottom right
+        CZ [qs.[7]; qs.[5]]
+        CZ [qs.[9]; qs.[6]]
+        CZ [qs.[14]; qs.[10]]
+        //top left
+        CZ [qs.[12]; qs.[9]]
+        CZ [qs.[10]; qs.[7]]
+        CZ [qs.[6]; qs.[2]]
+        //bottom left
+        CZ [qs.[8]; qs.[6]]
+        CZ [qs.[13]; qs.[10]]
+        CZ [qs.[15]; qs.[12]]
+
+        H >< qs
+
+
+        M qs.[0..0]
+        M qs.[5..5]
+        M qs.[11..11]
+        M qs.[16..16]
+        M qs.[4..4]
+        M qs.[6..6]
+        M qs.[10..10]
+        M qs.[12..12]
+
 
 
     [<LQD>]
@@ -241,7 +292,7 @@ module UserSample =
                 show "stats: Zeros=%d Ones=%d" stat.[0] stat.[1]
                 Reset Zero [surface.[8]];   *)
 
-            let circ        = Circuit.Compile Stabilize3 surface
+            let circ        = Circuit.Compile Stabilize4 surface
             circ.Dump()
             circ.RenderHT("Test")
     (*        let circ2       = Circuit.Compile test surface
