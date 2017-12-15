@@ -1,4 +1,10 @@
 Ideas and questions: 
 
-1- Multiple logical qubits in surface17 using the patches idea from "The surface code with a twist"
+1- Multiple logical qubits in surface17 using the patches idea from "The surface code with a twist" [No-G0...surface-17 has just enough distance for one logical qubit]
 2- What are magic states?
+3- Lattice surgery to implement a CNOT?
+4- Explore the rate of Hook errors using the noise model from Tomita and Svore's paper.
+5- Approximate decoherence using Clifford gates (see end of Tomita and Svore's paper).
+6- Determine perfomance of surface-17 under leakage (?) (see end of Tomita and Svore's paper).
+
+Note: Check first that noone has aleady done the work.
