@@ -18,3 +18,14 @@ C:\Liquid\Liquid\Surface17\bin\Release\Liquid1.xml
 C:\Liquid\Liquid\Surface17\obj\x64\Release\Liquid.fsproj.CoreCompileInputs.cache
 C:\Liquid\Liquid\Surface17\obj\x64\Release\Liquid.exe
 C:\Liquid\Liquid\Surface17\obj\x64\Release\Liquid.pdb
+C:\Liquid\Surface17\bin\Release\Liquid.exe.config
+C:\Liquid\Surface17\bin\Release\LiquidAzure.XML
+C:\Liquid\Surface17\bin\Release\Liquid.exe
+C:\Liquid\Surface17\bin\Release\Liquid.pdb
+C:\Liquid\Surface17\bin\Release\FSharp.Core.dll
+C:\Liquid\Surface17\bin\Release\Liquid1.dll
+C:\Liquid\Surface17\bin\Release\Liquid1.xml
+C:\Liquid\Surface17\bin\Release\zh-Hant\FSharp.Core.resources.dll
+C:\Liquid\Surface17\obj\x64\Release\Liquid.fsproj.CoreCompileInputs.cache
+C:\Liquid\Surface17\obj\x64\Release\Liquid.exe
+C:\Liquid\Surface17\obj\x64\Release\Liquid.pdb

@@ -244,14 +244,19 @@ module UserSample =
         CZ [qs.[7]; qs.[5]]
         CZ [qs.[14]; qs.[11]]
         CZ [qs.[2]; qs.[0]]
-
+        
+        H qs.[0..0];        H qs.[1..1];        H qs.[2..2];        H qs.[3..3]  // 4
+        H qs.[5..5]       // 6
+        H qs.[7..7];        H qs.[8..8];        H qs.[9..9]        // 10
+        H qs.[11..11]        // 12
+        H qs.[13..13];        H qs.[14..14];        H qs.[15..15];        H qs.[16..16]
         //Zs
         //top right
         CZ [qs.[1]; qs.[4]]
         CZ [qs.[3]; qs.[6]]
         CZ [qs.[8]; qs.[10]]
         //bottom right
-        CZ [qs.[7]; qs.[5]]
+        CZ [qs.[7]; qs.[4]]
         CZ [qs.[9]; qs.[6]]
         CZ [qs.[14]; qs.[10]]
         //top left
@@ -263,7 +268,7 @@ module UserSample =
         CZ [qs.[13]; qs.[10]]
         CZ [qs.[15]; qs.[12]]
 
-        H >< qs
+        H qs.[4..4];         H qs.[6..6];        H qs.[10..10];        H qs.[12..12]
 
 
         M qs.[0..0]
