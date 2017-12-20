@@ -284,8 +284,8 @@ module UserSample =
 
     [<LQD>]
     let __Surface_17() =
-        let stats                  = Array.create 2 0
-        for j in 0..20 do  //this loop is here because I am testing simple tomography on the decoded logical state
+        let stats                  = Array.create 2 0      
+        for j in 0..100 do  //this loop is here because I am testing simple tomography on the decoded logical state
             let surface           = Ket(17).Reset(17)
             Rpauli (Math.PI/4.) Y surface.[8..8]; CNOT [surface.[8]; surface.[6]]; CNOT [surface.[8]; surface.[10]]; SWAP [surface.[2]; surface.[6]]; SWAP [surface.[10]; surface.[14]];  //trying state injection (could be working)
 
@@ -296,10 +296,10 @@ module UserSample =
                 stat.[0 + surface.[8].Bit.v] <- stat.[0 + surface.[8].Bit.v] + 1 
                 show "stats: Zeros=%d Ones=%d" stat.[0] stat.[1]
                 Reset Zero [surface.[8]];   *)
-
             let circ        = Circuit.Compile Stabilize4 surface
             circ.Dump()
             circ.RenderHT("Test")
+            
     (*        let circ2       = Circuit.Compile test surface
             for i in 0..999 do
                 circ2.Run surface
@@ -327,16 +327,23 @@ module UserSample =
 
             //Decoding the logical State
             show "Decoding the Logical State"
-            show "MA3 = %d and MA4 = %d" surface.[6].Bit.v surface.[10].Bit.v
-            M surface.[1..1]; M surface.[15..15];
-            show "MD0 = %d and MD8 = %d" surface.[1].Bit.v surface.[15].Bit.v
-            if ((surface.[6].Bit.v + surface.[10].Bit.v + surface.[1].Bit.v + surface.[15].Bit.v)%2) = 0 then
+            //show "MA3 = %d and MA4 = %d" surface.[6].Bit.v surface.[10].Bit.v
+            M surface.[7..7]; M surface.[9..9];
+            show "MD3 = %d and MD5 = %d" surface.[7].Bit.v surface.[9].Bit.v
+            if ((surface.[7].Bit.v + surface.[9].Bit.v)%2) = 0 then
                 show "No X needed"
             else 
                 show "X needed"
                 X surface.[8..8]
 
-            M surface.[8..8]
+            CNOT [surface.[8]; surface.[2]]; CNOT [surface.[8]; surface.[14]];// SWAP [surface.[2]; surface.[6]]; SWAP [surface.[10]; surface.[14]]; 
+            M surface.[1..1]; M surface.[2..2]; M surface.[3..3]; M surface.[13..13]; M surface.[14..14]; M surface.[15..15];
+            //collapse all the other qubits. If there's entanglement between surf[8] then this would differ from just measure surf[8]
+            
+            //Rpauli (-Math.PI/2.) Y surface.[8..8];    //state tomo X
+            //Rpauli (Math.PI/2.) X surface.[8..8];     //state tomo Y
+            
+            M surface.[8..8];
             stats.[0 + surface.[8].Bit.v] <- stats.[0 + surface.[8].Bit.v] + 1; 
             show "stats: Zeros = %d   and Ones = %d" stats.[0] stats.[1]
 
