@@ -7,7 +7,7 @@
  The main entry point for Liquid.
  </summary>
 </member>
-<member name="M:Microsoft.Research.Liquid.UserSample.rotX(System.Double,Microsoft.FSharp.Collections.FSharpList{Microsoft.Research.Liquid.Qubit})">
+<member name="M:Microsoft.Research.Liquid.UserSample.myEPR(Microsoft.FSharp.Collections.FSharpList{Microsoft.Research.Liquid.Qubit})">
  <summary>
  Performs an arbitrary rotation around X. 
  </summary>

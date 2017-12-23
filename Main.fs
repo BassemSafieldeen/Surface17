@@ -6,7 +6,7 @@ module UserSample =
     open Operations
     open System.Runtime.CompilerServices
     open HamiltonianGates
-
+    open System.Text
     //open Native             // Support for Native Interop
     //open HamiltonianGates   // Extra gates for doing Hamiltonian simulations
     //open Tests              // All the built-in tests
@@ -16,6 +16,85 @@ module UserSample =
     /// </summary>
     /// <param name="theta">Angle to rotate by</param>
     /// <param name="qs">The head qubit of this list is operated on.</param>
+
+    //================= following are two examples : QECC() and NoiseAmpp() =============
+    let myEPR (qs:Qubits) = 
+        H qs; CNOT qs;  //X qs; // M qs
+    let myfun (qs:Qubits) =
+        H qs; M >< qs       
+    [<LQD>]
+    let QECC() =  // A smiple example showing how Stabilizer and its methods work. This code is derived from Liquid/Sample/QECC.fsx 
+        let k               = Ket(2)
+        let qs               = k.Reset(2)
+        let circc            = Circuit.Compile myEPR qs  // create a circuit first
+        let stab            = Stabilizer(circc,k)        // generate a Stabilizer object
+        
+        stab.Run()
+        //let _,b0            = stab.[0]    // If there's "M qs[0]" in circc, stab.[0] would show the measurement result of qs[0]. If not, then this line would cause run time error.
+        //let _,b1            = stab.[1]
+        //show "EPR in stabilizer: [%d%d] " b0.v b1.v
+        show ""
+        // Show the final state in the form of stabilizer tableau. 
+        show "=== Final State: "  
+        stab.ShowState showInd 0
+        stab.Gaussian()
+        show "=== After Gaussian: "
+        stab.ShowState showInd 0
+        show ""
+        (*  // This comment shows how to intepret the screen print. Tkae the final state of an EPR pair as an example :
+        0:0000.0/=== Final State:
+        0:0000.0/
+        0:0000.0/+Z.
+        0:0000.0/+.X
+        0:0000.0/---
+        0:0000.0/+XX    <----------- The final state is stablized by X1X2. That is, the eigenstate of X1X2 with eigenvalue +1.
+        0:0000.0/+ZZ    <-----------                              by Z1Z2.                            Z1Z2                 +1.
+
+        The upper/lower part is destabilizer/stabilizer generators. see "An Introduction to Stabilizer Circuit Simulation UMD Department of ..."
+        
+        In this EPR example, Z1 and X2 are destabilizer generators. X1X2, Z1Z2 are stabilizer generators.
+        *)
+    [<LQD>]
+    let NoiseAmpp() =  // A example code showing how to obtain the state without doing state tomography. This code is derived from Liquid/Sample/NoiseAmp.fsx 
+                       // This may be helpful in understanding NoiseAmp.fsx.
+        // Output dump routine
+        let sb              = StringBuilder()
+        let app (x:string)  = sb.Append x |> ignore
+        let dump (m:bool) (iter:int) (v:CVec) =      //show every component of ket v
+            if iter = 0 then show "Iter,qs=00,qs=01,qs=10,qs=11"
+
+            sb.Length      <- 0
+            sprintf "%4d" iter |> app
+            for i in 0UL..v.Length-1UL do
+                app ","
+                if m = true then
+                    sprintf "%7.3f" v.[i].r |> app  // get the real part of v.[i]
+                    sprintf "+%7.3f i" v.[i].i |> app  // get the real part of v.[i]
+                if m = false then
+                    sprintf "%7.5f" v.[i].MCC |> app  // get the real part of v.[i]
+            show "%O" sb
+
+        // 2 Qubit tests
+        let ket     = Ket(2)
+        let qs          = ket.Reset(2)    
+        let circ    = Circuit.Compile (fun (qs:Qubits) -> Rpauli (Math.PI/8.) X  qs) ket.Qubits
+        
+        //Get a handle to the state vector for output
+        let v           = ket.Single()  // fully realized state vector (2^n in size)
+        dump true 0 v
+        for iter in 1..30 do
+            circ.Run qs 
+            dump true iter v  //show the state ket = a|00> + b|01> + c|10> + d|11>
+        
+        let qs          = ket.Reset(2) 
+        let v           = ket.Single()
+        dump false 0 v
+        for iter in 1..30 do
+            circ.Run qs 
+            dump false iter v  //show magnitude square of ket (probability of being 0 and 1 )
+
+      //================= above are two examples : QECC() and NoiseAmpp() =============
+
     let rotX (theta:float) (qs:Qubits) =
         let gate (theta:float) =
             let nam     = "Rx" + theta.ToString("F2")
