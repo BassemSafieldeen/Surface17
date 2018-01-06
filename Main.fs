@@ -23,7 +23,7 @@ module UserSample =
     let myfun (qs:Qubits) =
         H qs; M >< qs       
     [<LQD>]
-    let QECC() =  // A smiple example showing how Stabilizer and its methods work. This code is derived from Liquid/Sample/QECC.fsx 
+    let QECC() =  // A simple example showing how Stabilizer and its methods work. This code is derived from Liquid/Sample/QECC.fsx 
         let k               = Ket(2)
         let qs               = k.Reset(2)
         let circc            = Circuit.Compile myEPR qs  // create a circuit first
@@ -137,174 +137,8 @@ module UserSample =
                     failwith "bad"
          show "Measured: zeros=%d and ones=%d" stats.[0] stats.[1]
 
-
-    let Stabilize(qs:Qubits) =
- //     Apply the first measurement qubit
-        H qs
-        CNOT [qs.[0];qs.[2]]
-        CNOT [qs.[0];qs.[3]]
-        H qs
-    //    rotX (Math.PI/2.) qs
-        M qs
- //     Apply the second measurement qubit
-        CNOT [qs.[1];qs.[4]]
-        CNOT [qs.[7];qs.[4]]
-        M qs.[4..4]
- //     Apply the third measurement qubit
-        H qs.[5..5]
-        CNOT [qs.[5];qs.[2]]
-        CNOT [qs.[5];qs.[8]]
-        CNOT [qs.[5];qs.[1]]
-        CNOT [qs.[5];qs.[6]]
-        H qs.[5..5]
-    //    rotX (Math.PI/2.) qs.[5..5]
-        M qs.[5..5]
- //     Apply the fourth measurement qubit
-        CNOT [qs.[3];qs.[6]]
-        CNOT [qs.[9];qs.[6]]
-        CNOT [qs.[2];qs.[6]]
-        CNOT [qs.[8];qs.[6]]
-        M qs.[6..6]
- //     Apply the fifth measurement qubit
-        CNOT [qs.[8];qs.[10]]
-        CNOT [qs.[14];qs.[10]]
-        CNOT [qs.[7];qs.[10]]
-        CNOT [qs.[13];qs.[10]]
-        M qs.[10..10]
- //     Apply the sixth measurement qubit
-        H qs.[11..11]
-        CNOT [qs.[11];qs.[9]]
-        CNOT [qs.[11];qs.[15]]
-        CNOT [qs.[11];qs.[8]]
-        CNOT [qs.[11];qs.[14]]
-        H qs.[11..11]
-    //    rotX (Math.PI/2.) qs.[11..11]
-        M qs.[11..11]
- //     Apply the seventh measurement qubit
-        CNOT [qs.[9];qs.[12]]
-        CNOT [qs.[15];qs.[12]]
-        M qs.[12..12]
- //     Apply the eightth measurement qubit
-        H qs.[16..16]
-        CNOT [qs.[16];qs.[14]]
-        CNOT [qs.[16];qs.[13]]
-        H qs.[16..16]
-    //    rotX (Math.PI/2.) qs.[16..16]
-        M qs.[16..16]
-
-(*    let test(qs:Qubits) =
-        X qs
-        M qs.[0..0]
-        M qs.[1..1]
-        M qs.[2..2]   *)  // Comment
-
-    let Stabilize2(qs:Qubits) =
-        //Xs
-        H qs.[0..0]
-        H qs.[5..5]
-        H qs.[11..11]
-        H qs.[16..16]
-        //top right
-        CNOT [qs.[5]; qs.[2]]
-        CNOT [qs.[11]; qs.[9]]
-        CNOT [qs.[16]; qs.[14]]
-        //top left
-        CNOT [qs.[5]; qs.[1]]
-        CNOT [qs.[11]; qs.[8]]
-        CNOT [qs.[16]; qs.[13]]
-        //bottom right
-        CNOT [qs.[5]; qs.[8]]
-        CNOT [qs.[11]; qs.[15]]
-        CNOT [qs.[0]; qs.[3]]
-        //bottom left
-        CNOT [qs.[5]; qs.[7]]
-        CNOT [qs.[11]; qs.[14]]
-        CNOT [qs.[0]; qs.[2]]
-
-        H qs.[0..0]
-        H qs.[5..5]
-        H qs.[11..11]
-        H qs.[16..16]
-
-        //Zs
-        //top right
-        CNOT [qs.[1]; qs.[4]]
-        CNOT [qs.[3]; qs.[6]]
-        CNOT [qs.[8]; qs.[10]]
-        //bottom right
-        CNOT [qs.[7]; qs.[5]]
-        CNOT [qs.[9]; qs.[6]]
-        CNOT [qs.[14]; qs.[10]]
-        //top left
-        CNOT [qs.[12]; qs.[9]]
-        CNOT [qs.[10]; qs.[7]]
-        CNOT [qs.[6]; qs.[2]]
-        //bottom left
-        CNOT [qs.[8]; qs.[6]]
-        CNOT [qs.[13]; qs.[10]]
-        CNOT [qs.[15]; qs.[12]]
-
-        M qs.[0..0]
-        M qs.[5..5]
-        M qs.[11..11]
-        M qs.[16..16]
-        M qs.[4..4]
-        M qs.[6..6]
-        M qs.[10..10]
-        M qs.[12..12]
-
-    let Stabilize3(qs:Qubits) =
-        Rpauli (-Math.PI/2.) Y >< qs
-        //Xs
-        //top right
-        CZ [qs.[2]; qs.[5]]
-        CZ [qs.[9]; qs.[11]]
-        CZ [qs.[14]; qs.[16]]
-        //top left
-        CZ [qs.[1]; qs.[5]]
-        CZ [qs.[8]; qs.[11]]
-        CZ [qs.[13]; qs.[16]]
-        //bottom right
-        CZ [qs.[8]; qs.[5]]
-        CZ [qs.[15]; qs.[11]]
-        CZ [qs.[3]; qs.[0]]
-        //bottom left
-        CZ [qs.[7]; qs.[5]]
-        CZ [qs.[14]; qs.[11]]
-        CZ [qs.[2]; qs.[0]]
-
-        //Zs
-        //top right
-        CZ [qs.[1]; qs.[4]]
-        CZ [qs.[3]; qs.[6]]
-        CZ [qs.[8]; qs.[10]]
-        //bottom right
-        CZ [qs.[7]; qs.[5]]
-        CZ [qs.[9]; qs.[6]]
-        CZ [qs.[14]; qs.[10]]
-        //top left
-        CZ [qs.[12]; qs.[9]]
-        CZ [qs.[10]; qs.[7]]
-        CZ [qs.[6]; qs.[2]]
-        //bottom left
-        CZ [qs.[8]; qs.[6]]
-        CZ [qs.[13]; qs.[10]]
-        CZ [qs.[15]; qs.[12]]
-
-        Rpauli (Math.PI/2.) Y >< qs
-
-
-        M qs.[0..0]
-        M qs.[5..5]
-        M qs.[11..11]
-        M qs.[16..16]
-        M qs.[4..4]
-        M qs.[6..6]
-        M qs.[10..10]
-        M qs.[12..12]
-
         
-    let Stabilize4(qs:Qubits) =
+    let Stabilize(qs:Qubits) =
         H >< qs
         //Xs
         //top right
@@ -378,33 +212,17 @@ module UserSample =
     [<LQD>]
     let __Surface_17() =
         let stats                  = Array.create 2 0      
-        //for j in 0..100 do  //this loop is here because I am testing simple tomography on the decoded logical state
         let ket               = Ket(17)
         let surface           = ket.Reset(17)
         //State Injection
         Rpauli (Math.PI/8.) Y surface.[8..8]; 
-        //let v = ket.Single()
+        //let v = ket.Single()    // Uncomment this line and the following line to see the state after injection
         //dump false 0 v
-        CNOT [surface.[8]; surface.[6]]; CNOT [surface.[8]; surface.[10]]; SWAP [surface.[2]; surface.[6]]; SWAP [surface.[10]; surface.[14]];  //trying state injection (could be working)
-
-    (*      let stat              = Array.create 2 0
-        for i in 0..50 do
-            Rpauli (Math.PI/4.) Y surface.[8..8]; //CNOT [surface.[8]; surface.[6]]; CNOT [surface.[8]; surface.[10]]; SWAP [surface.[2]; surface.[6]]; SWAP [surface.[10]; surface.[14]];  //trying state injection (could be working)
-            M surface.[8..8]
-            stat.[0 + surface.[8].Bit.v] <- stat.[0 + surface.[8].Bit.v] + 1 
-            show "stats: Zeros=%d Ones=%d" stat.[0] stat.[1]
-            Reset Zero [surface.[8]];   *)
-        let circ        = Circuit.Compile Stabilize4 ket.Qubits
+        CNOT [surface.[8]; surface.[6]]; CNOT [surface.[8]; surface.[10]]; SWAP [surface.[2]; surface.[6]]; SWAP [surface.[10]; surface.[14]];  //State Injection
+        let circ        = Circuit.Compile Stabilize ket.Qubits
         circ.Dump()
         circ.RenderHT("Test")
-            
-(*        let circ2       = Circuit.Compile test surface
-        for i in 0..999 do
-            circ2.Run surface
-            show "test: %d %d %d" surface.[0].Bit.v surface.[1].Bit.v surface.[2].Bit.v
-            Restore [surface.[0]]
-            Restore [surface.[1]]
-            Restore [surface.[2]] *)
+
 
         for i in 0..5 do
             circ.Run surface
@@ -447,13 +265,6 @@ module UserSample =
         let v = ket.Single()
         dump false 0 v
 
-            
-            //Rpauli (-Math.PI/2.) Y surface.[8..8];    //state tomo X
-            //Rpauli (Math.PI/2.) X surface.[8..8];     //state tomo Y
-            
-            //M surface.[8..8];
-            //stats.[0 + surface.[8].Bit.v] <- stats.[0 + surface.[8].Bit.v] + 1; 
-            //show "stats: Zeros = %d   and Ones = %d" stats.[0] stats.[1]
 
 module Main =
     open App
