@@ -382,9 +382,9 @@ module UserSample =
         let ket               = Ket(17)
         let surface           = ket.Reset(17)
         //State Injection
-        Rpauli (Math.PI/4.) Y surface.[8..8]; 
-        let v = ket.Single()
-        dump false 0 v
+        Rpauli (Math.PI/8.) Y surface.[8..8]; 
+        //let v = ket.Single()
+        //dump false 0 v
         CNOT [surface.[8]; surface.[6]]; CNOT [surface.[8]; surface.[10]]; SWAP [surface.[2]; surface.[6]]; SWAP [surface.[10]; surface.[14]];  //trying state injection (could be working)
 
     (*      let stat              = Array.create 2 0
@@ -436,10 +436,14 @@ module UserSample =
 
         CNOT [surface.[8]; surface.[2]]; CNOT [surface.[8]; surface.[14]];// SWAP [surface.[2]; surface.[6]]; SWAP [surface.[10]; surface.[14]]; 
         M surface.[1..1]; M surface.[2..2]; M surface.[3..3]; M surface.[13..13]; M surface.[14..14]; M surface.[15..15];
-        //collapse all the other qubits. If there's entanglement between surf[8] then this would differ from just measure surf[8]
+        //collapse all the other qubits. If there's entanglement between surf[8] then this would differ from just measure surf[8] 
+
 
         //State Tomography
-        show "Doing Tomography"
+        show "Doing Tomography (this destroys the surface, i.e. you cannot do tomography and carry on with other operations)."
+        for i in 0..16 do
+            if i <> 8 then
+                Reset Zero [surface.[i]];
         let v = ket.Single()
         dump false 0 v
 
