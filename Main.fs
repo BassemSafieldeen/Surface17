@@ -199,14 +199,14 @@ module UserSample =
         //if iter = 0 then show "Iter,qs=00,qs=01,qs=10,qs=11"
 
         sb.Length      <- 0
-        sprintf "%4d" iter |> app
+        //sprintf "%4d" iter |> app
         for i in 0UL..v.Length-1UL do
-            app ","
+            //app ", "
             if m = true then
-                sprintf "%7.3f" v.[i].r |> app  // get the real part of v.[i]
-                sprintf "+%7.3f i" v.[i].i |> app  // get the real part of v.[i]
+                if v.[i].r <> 0.0 then sprintf ", i=%4d" i |> app; sprintf "%7.3f" v.[i].r |> app  // get the real part of v.[i]
+                if v.[i].i <> 0.0 then sprintf ", i=%4d" i |> app; sprintf "+%7.3f i" v.[i].i |> app  // get the real part of v.[i]
             if m = false then
-                sprintf "%7.5f" v.[i].MCC |> app  // get the real part of v.[i]
+                if v.[i].MCC <> 0.0 then sprintf ", i=%4d" i |> app; sprintf " MCC=%7.5f" v.[i].MCC |> app  // get the real part of v.[i]
         show "%O" sb
 
     [<LQD>]
@@ -219,9 +219,9 @@ module UserSample =
         let surface           = ket.Reset(17);
         let mutable flag = 0;
         //State Injection
-        Rpauli (Math.PI/8.) Y surface.[8..8]; 
-        //let v = ket.Single()    // Uncomment this line and the following line to see the state after injection
-        //dump false 0 v
+        //Rpauli (Math.PI/8.) Y surface.[8..8]; 
+        let v = ket.Single()    // Uncomment this line and the following line to see the state after injection
+        dump false 0 v
         CNOT [surface.[8]; surface.[6]]; CNOT [surface.[8]; surface.[10]]; SWAP [surface.[2]; surface.[6]]; SWAP [surface.[10]; surface.[14]];  //State Injection
         let circ        = Circuit.Compile Stabilize ket.Qubits
         circ.Dump()
@@ -252,11 +252,11 @@ module UserSample =
         // End noise model
 
 
-        for i in 0..100 do
+        for i in 0..10 do
             noise.Run ket
             circ.Run ket.Qubits
             noise.Dump(showInd,0,true)
-            if i <> 100 then   //this condition is here because at the last step we need to do decoding
+            if i <> 10 then   //this condition is here because at the last step we need to do decoding
                 show "Syndrome measurements: %d %d %d %d %d %d %d %d" surface.[0].Bit.v surface.[4].Bit.v surface.[5].Bit.v surface.[6].Bit.v surface.[10].Bit.v surface.[11].Bit.v surface.[12].Bit.v surface.[16].Bit.v
                 //Implementing Decoder
                 new_syndrome <- [|surface.[0].Bit.v; surface.[4].Bit.v; surface.[5].Bit.v; surface.[6].Bit.v; surface.[10].Bit.v; surface.[11].Bit.v; surface.[12].Bit.v; surface.[16].Bit.v |];
@@ -290,13 +290,13 @@ module UserSample =
                 //show "__"
 
                 //show "Logical H"
-                //H surface.[1..1]; H surface.[2..2]; H surface.[3..3]; H surface.[7..7]; H surface.[8..8]; H surface.[9..9]; H surface.[13..13]; H surface.[14..14]; H surface.[15..15];
+                if i = 6 then H surface.[1..1]; H surface.[2..2]; H surface.[3..3]; H surface.[7..7]; H surface.[8..8]; H surface.[9..9]; H surface.[13..13]; H surface.[14..14]; H surface.[15..15];
                 
                 //show "Logical Z"
-                //Z surface.[2..2]; Z surface.[8..8]; Z surface.[14..14];
+                //Z surface.[1..1]; Z surface.[8..8]; Z surface.[15..15];
 
                 //show "Logical X"
-                //X surface.[7..7]; X surface.[8..8]; X surface.[9..9];
+                //X surface.[3..3]; X surface.[8..8]; X surface.[13..13];
 
         //Decoding the logical State
         show "Decoding the Logical State"
@@ -308,7 +308,6 @@ module UserSample =
         else 
             show "X needed"
             X surface.[8..8]
-
         CNOT [surface.[8]; surface.[2]]; CNOT [surface.[8]; surface.[14]];// SWAP [surface.[2]; surface.[6]]; SWAP [surface.[10]; surface.[14]]; 
         M surface.[1..1]; M surface.[2..2]; M surface.[3..3]; M surface.[13..13]; M surface.[14..14]; M surface.[15..15];
         //collapse all the other qubits. If there's entanglement between surf[8] then this would differ from just measure surf[8] 
@@ -319,8 +318,8 @@ module UserSample =
         for i in 0..16 do
             if i <> 8 then
                 Reset Zero [surface.[i]];
-        //let v = ket.Single()
-        //dump false 0 v
+        let v = ket.Single()
+        dump false 0 v
 
 
 module Main =
