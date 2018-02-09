@@ -211,7 +211,10 @@ module UserSample =
 
     [<LQD>]
     let __Surface_17() =
-        let stats                  = Array.create 2 0      
+        let stats                  = Array.create 2 0 
+        let mutable prev_syndrome =  [|0; 0; 0; 0; 0; 0; 0; 0|];
+        let mutable new_syndrome = [|0; 0; 0; 0; 0; 0; 0; 0|];
+        let mutable changes = [|0; 0; 0; 0; 0; 0; 0; 0|];
         let ket               = Ket(17)
         let surface           = ket.Reset(17)
         //State Injection
@@ -248,12 +251,44 @@ module UserSample =
         // End noise model
 
 
-        for i in 0..50 do
+        for i in 0..5 do
             noise.Run ket
             circ.Run surface
             noise.Dump(showInd,0,true)
-            if i <> 50 then   //this condition is here because at the last step we need to do decoding
+            if i <> 5 then   //this condition is here because at the last step we need to do decoding
                 show "Syndrome measurements: %d %d %d %d %d %d %d %d" surface.[0].Bit.v surface.[4].Bit.v surface.[5].Bit.v surface.[6].Bit.v surface.[10].Bit.v surface.[11].Bit.v surface.[12].Bit.v surface.[16].Bit.v
+                new_syndrome <- [|surface.[0].Bit.v; surface.[4].Bit.v; surface.[5].Bit.v; surface.[6].Bit.v; surface.[10].Bit.v; surface.[11].Bit.v; surface.[12].Bit.v; surface.[16].Bit.v |];
+
+                //Implementing Decoder
+
+                    //single qubit errors
+                changes <- [| for k in 0..7 -> prev_syndrome.[k] ^^^ new_syndrome.[k]|]; //xor
+                if (changes.[0] = 1) && (changes.[2] = 0) then show "Z error on data qubit 2 occurred";
+                if (changes.[0] = 1) && (changes.[2] = 1) then show "Z error on data qubit 1 occurred";
+                if (changes.[1] = 1) && (changes.[4] = 0) then show "X error on data qubit 0 occurred";
+                if (changes.[1] = 1) && (changes.[4] = 1) then show "X error on data qubit 3 occurred";
+                if (changes.[2] = 1) && (changes.[0] = 0) && (changes.[5] = 0) then show "Z error on data qubits 3 or 0 occurred";
+                if (changes.[2] = 1) && (changes.[0] = 1) && (changes.[5] = 0) then show "Z error on data qubit 1 occurred";
+                if (changes.[2] = 1) && (changes.[0] = 0) && (changes.[5] = 1) then show "Z error on data qubit 4 occurred";
+                if (changes.[3] = 1) && (changes.[4] = 0) && (changes.[6] = 0) then show "X error on data qubits 1 or 2 occurred";
+                if (changes.[3] = 1) && (changes.[4] = 1) && (changes.[6] = 0) then show "X error on data qubit 4 occurred";
+                if (changes.[3] = 1) && (changes.[4] = 0) && (changes.[6] = 1) then show "X error on data qubit 5 occurred";
+                if (changes.[4] = 1) && (changes.[1] = 0) && (changes.[3] = 0) then show "X error on data qubits 6 or 7 occurred";
+                //if (changes.[4] = 1) && (changes.[1] = 1) && (changes.[3] = 0) then show "X error on data qubit 3 occurred"; redundant
+                //if (changes.[4] = 1) && (changes.[1] = 0) && (changes.[3] = 1) then show "X error on data qubit 4 occurred"; redundant
+                if (changes.[5] = 1) && (changes.[2] = 0) && (changes.[7] = 0) then show "Z error on data qubits 5 or 8 occurred";
+                //if (changes.[5] = 1) && (changes.[2] = 1) && (changes.[7] = 0) then show "Z error on data qubit 4 occurred"; redundant
+                if (changes.[5] = 1) && (changes.[2] = 0) && (changes.[7] = 1) then show "Z error on data qubit 7 occurred";
+                if (changes.[6] = 1) && (changes.[3] = 0) then show "X error on data qubit 8 occurred";
+                if (changes.[6] = 1) && (changes.[3] = 1) then show "X error on data qubit 5 occurred";
+                if (changes.[7] = 1) && (changes.[5] = 0) then show "Z error on data qubit 6 occurred";
+                //if (changes.[7] = 1) && (changes.[5] = 1) then show "Z error on data qubit 7 occurred"; redundant
+
+                    //2-qubit errors
+                
+                prev_syndrome <- new_syndrome;
+                
+
                 Reset Zero [surface.[0]]; Reset Zero [surface.[4]]; Reset Zero [surface.[5]]; Reset Zero [surface.[6]]; Reset Zero [surface.[10]]; Reset Zero [surface.[11]]; Reset Zero [surface.[12]]; Reset Zero [surface.[16]];
             //if i=2 then
                 //show "__"
