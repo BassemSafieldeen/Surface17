@@ -267,11 +267,11 @@ module UserSample =
                 if (changes.[1] = 1) && (changes.[4] = 0) then show "X error on data qubit 0 occurred. Applying fix."; X ket.Qubits.[1..1]; flag <- 1;
                 if (changes.[1] = 1) && (changes.[4] = 1) then show "X error on data qubit 3 occurred. Applying fix."; X ket.Qubits.[7..7]; flag <- 1;
                 if (changes.[2] = 1) && (changes.[0] = 0) && (changes.[5] = 0) then show "Z error on data qubits 3 or 0 occurred. Applying fix."; Z ket.Qubits.[1..1]; flag <- 1;
-                if (changes.[2] = 1) && (changes.[0] = 1) && (changes.[5] = 0) then show "Z error on data qubit 1 occurred. Applying fix."; Z ket.Qubits.[2..2]; flag <- 1;
+                //if (changes.[2] = 1) && (changes.[0] = 1) && (changes.[5] = 0) then show "Z error on data qubit 1 occurred. Applying fix."; Z ket.Qubits.[2..2]; flag <- 1; redundant
                 if (changes.[2] = 1) && (changes.[0] = 0) && (changes.[5] = 1) then show "Z error on data qubit 4 occurred. Applying fix."; Z ket.Qubits.[8..8]; flag <- 1;
                 if (changes.[3] = 1) && (changes.[4] = 0) && (changes.[6] = 0) then show "X error on data qubits 1 or 2 occurred. Applying fix."; X ket.Qubits.[2..2]; flag <- 1;
                 if (changes.[3] = 1) && (changes.[4] = 1) && (changes.[6] = 0) then show "X error on data qubit 4 occurred. Applying fix."; X ket.Qubits.[8..8]; flag <- 1;
-                if (changes.[3] = 1) && (changes.[4] = 0) && (changes.[6] = 1) then show "X error on data qubit 5 occurred. Applying fix."; X ket.Qubits.[9..9]; flag <- 1;
+                //if (changes.[3] = 1) && (changes.[4] = 0) && (changes.[6] = 1) then show "X error on data qubit 5 occurred. Applying fix."; X ket.Qubits.[9..9]; flag <- 1; redundant
                 if (changes.[4] = 1) && (changes.[1] = 0) && (changes.[3] = 0) then show "X error on data qubits 6 or 7 occurred. Applying fix."; X ket.Qubits.[13..13]; flag <- 1;
                 //if (changes.[4] = 1) && (changes.[1] = 1) && (changes.[3] = 0) then show "X error on data qubit 3 occurred"; redundant
                 //if (changes.[4] = 1) && (changes.[1] = 0) && (changes.[3] = 1) then show "X error on data qubit 4 occurred"; redundant
@@ -300,7 +300,7 @@ module UserSample =
 
         //Decoding the logical State
         show "Decoding the Logical State"
-        //show "MA3 = %d and MA4 = %d" surface.[6].Bit.v surface.[10].Bit.v
+        //show "MA3 = %d and MA4 = %d" surface.[6].Bit.v        ` surface.[10].Bit.v
         M surface.[7..7]; M surface.[9..9];
         show "MD3 = %d and MD5 = %d" surface.[7].Bit.v surface.[9].Bit.v
         if ((surface.[7].Bit.v + surface.[9].Bit.v)%2) = 0 then
