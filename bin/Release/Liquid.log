@@ -406,8 +406,570 @@
 0:0000.0/Writing: Test.tex (split=50.00% scale=70.00%)
 0:0000.0/     Doing columns:  0 - 35
 0:0000.0/     Doing columns: 35 - 68
-0:0000.0/Syndrome measurements: 1 0 0 0 0 1 0 0
-0:0000.0/Syndrome measurements: 1 0 0 0 0 1 0 0
-0:0000.0/Syndrome measurements: 1 0 0 0 0 1 0 0
-0:0000.0/Syndrome measurements: 1 0 0 0 0 1 0 0
-0:0000.1/Syndrome measurements: 1 0 0 0 0 1 0 0
+0:0000.0/========== Noise models =========
+0:0000.0/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.0/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.0/              I   1.0      17       0       0       0       0       0
+0:0000.0/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.0/
+0:0000.0/========== Detailed statistics =========
+0:0000.0/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.0/      ----    ------------     --- -----        ---- ------
+0:0000.0/
+0:0000.0/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.0/========== Noise models =========
+0:0000.0/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.0/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.0/              I   1.0      17       0       0       0       0       0
+0:0000.0/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.0/
+0:0000.0/========== Detailed statistics =========
+0:0000.0/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.0/      ----    ------------     --- -----        ---- ------
+0:0000.0/
+0:0000.0/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.0/========== Noise models =========
+0:0000.0/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.0/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.0/              I   1.0      17       0       0       0       0       0
+0:0000.0/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.0/
+0:0000.0/========== Detailed statistics =========
+0:0000.0/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.0/      ----    ------------     --- -----        ---- ------
+0:0000.0/
+0:0000.0/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.1/========== Noise models =========
+0:0000.1/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.1/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.1/              I   1.0      17       0       0       0       0       0
+0:0000.1/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.1/
+0:0000.1/========== Detailed statistics =========
+0:0000.1/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.1/      ----    ------------     --- -----        ---- ------
+0:0000.1/
+0:0000.1/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.1/========== Noise models =========
+0:0000.1/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.1/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.1/              I   1.0      17       0       0       0       0       0
+0:0000.1/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.1/
+0:0000.1/========== Detailed statistics =========
+0:0000.1/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.1/      ----    ------------     --- -----        ---- ------
+0:0000.1/
+0:0000.1/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.1/========== Noise models =========
+0:0000.1/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.1/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.1/              I   1.0      17       0       0       0       0       0
+0:0000.1/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.1/
+0:0000.1/========== Detailed statistics =========
+0:0000.1/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.1/      ----    ------------     --- -----        ---- ------
+0:0000.1/
+0:0000.1/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.1/========== Noise models =========
+0:0000.1/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.1/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.1/              I   1.0      17       0       0       0       0       0
+0:0000.1/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.1/
+0:0000.1/========== Detailed statistics =========
+0:0000.1/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.1/      ----    ------------     --- -----        ---- ------
+0:0000.1/
+0:0000.1/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.1/========== Noise models =========
+0:0000.1/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.1/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.1/              I   1.0      17       0       0       0       0       0
+0:0000.1/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.1/
+0:0000.1/========== Detailed statistics =========
+0:0000.1/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.1/      ----    ------------     --- -----        ---- ------
+0:0000.1/
+0:0000.1/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.1/========== Noise models =========
+0:0000.1/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.1/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.1/              I   1.0      17       0       0       0       0       0
+0:0000.1/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.1/
+0:0000.1/========== Detailed statistics =========
+0:0000.1/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.1/      ----    ------------     --- -----        ---- ------
+0:0000.1/
+0:0000.1/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.1/========== Noise models =========
+0:0000.1/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.1/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.1/              I   1.0      17       0       0       0       0       0
+0:0000.1/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.1/
+0:0000.1/========== Detailed statistics =========
+0:0000.1/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.1/      ----    ------------     --- -----        ---- ------
+0:0000.1/
+0:0000.1/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.1/========== Noise models =========
+0:0000.1/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.1/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.1/              I   1.0      17       0       0       0       0       0
+0:0000.1/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.1/
+0:0000.1/========== Detailed statistics =========
+0:0000.1/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.1/      ----    ------------     --- -----        ---- ------
+0:0000.1/
+0:0000.1/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.1/========== Noise models =========
+0:0000.1/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.1/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.1/              I   1.0      17       0       0       0       0       0
+0:0000.1/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.1/
+0:0000.1/========== Detailed statistics =========
+0:0000.1/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.1/      ----    ------------     --- -----        ---- ------
+0:0000.1/
+0:0000.1/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.1/========== Noise models =========
+0:0000.1/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.1/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.1/              I   1.0      17       0       0       0       0       0
+0:0000.1/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.1/
+0:0000.1/========== Detailed statistics =========
+0:0000.1/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.1/      ----    ------------     --- -----        ---- ------
+0:0000.1/
+0:0000.1/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.1/========== Noise models =========
+0:0000.1/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.1/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.1/              I   1.0      17       0       0       0       0       0
+0:0000.1/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.1/
+0:0000.1/========== Detailed statistics =========
+0:0000.1/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.1/      ----    ------------     --- -----        ---- ------
+0:0000.1/
+0:0000.1/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.2/========== Noise models =========
+0:0000.2/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.2/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.2/              I   1.0      17       0       0       0       0       0
+0:0000.2/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.2/
+0:0000.2/========== Detailed statistics =========
+0:0000.2/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.2/      ----    ------------     --- -----        ---- ------
+0:0000.2/
+0:0000.2/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.2/========== Noise models =========
+0:0000.2/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.2/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.2/              I   1.0      17       0       0       0       0       0
+0:0000.2/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.2/
+0:0000.2/========== Detailed statistics =========
+0:0000.2/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.2/      ----    ------------     --- -----        ---- ------
+0:0000.2/
+0:0000.2/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.2/========== Noise models =========
+0:0000.2/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.2/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.2/              I   1.0      17       0       0       0       0       0
+0:0000.2/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.2/
+0:0000.2/========== Detailed statistics =========
+0:0000.2/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.2/      ----    ------------     --- -----        ---- ------
+0:0000.2/
+0:0000.2/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.2/========== Noise models =========
+0:0000.2/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.2/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.2/              I   1.0      17       0       0       0       0       0
+0:0000.2/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.2/
+0:0000.2/========== Detailed statistics =========
+0:0000.2/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.2/      ----    ------------     --- -----        ---- ------
+0:0000.2/
+0:0000.2/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.2/========== Noise models =========
+0:0000.2/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.2/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.2/              I   1.0      17       0       0       0       0       0
+0:0000.2/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.2/
+0:0000.2/========== Detailed statistics =========
+0:0000.2/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.2/      ----    ------------     --- -----        ---- ------
+0:0000.2/
+0:0000.2/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.2/========== Noise models =========
+0:0000.2/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.2/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.2/              I   1.0      17       0       0       0       0       0
+0:0000.2/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.2/
+0:0000.2/========== Detailed statistics =========
+0:0000.2/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.2/      ----    ------------     --- -----        ---- ------
+0:0000.2/
+0:0000.2/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.2/========== Noise models =========
+0:0000.2/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.2/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.2/              I   1.0      17       0       0       0       0       0
+0:0000.2/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.2/
+0:0000.2/========== Detailed statistics =========
+0:0000.2/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.2/      ----    ------------     --- -----        ---- ------
+0:0000.2/
+0:0000.2/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.2/========== Noise models =========
+0:0000.2/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.2/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.2/              I   1.0      17       0       0       0       0       0
+0:0000.2/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.2/
+0:0000.2/========== Detailed statistics =========
+0:0000.2/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.2/      ----    ------------     --- -----        ---- ------
+0:0000.2/
+0:0000.2/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.2/========== Noise models =========
+0:0000.2/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.2/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.2/              I   1.0      17       0       0       0       0       0
+0:0000.2/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.2/
+0:0000.2/========== Detailed statistics =========
+0:0000.2/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.2/      ----    ------------     --- -----        ---- ------
+0:0000.2/
+0:0000.2/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.2/========== Noise models =========
+0:0000.2/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.2/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.2/              I   1.0      17       0       0       0       0       0
+0:0000.2/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.2/
+0:0000.2/========== Detailed statistics =========
+0:0000.2/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.2/      ----    ------------     --- -----        ---- ------
+0:0000.2/
+0:0000.2/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.2/========== Noise models =========
+0:0000.2/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.2/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.2/              I   1.0      17       0       0       0       0       0
+0:0000.2/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.2/
+0:0000.2/========== Detailed statistics =========
+0:0000.2/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.2/      ----    ------------     --- -----        ---- ------
+0:0000.2/
+0:0000.2/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.3/========== Noise models =========
+0:0000.3/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.3/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.3/              I   1.0      17       0       0       0       0       0
+0:0000.3/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.3/
+0:0000.3/========== Detailed statistics =========
+0:0000.3/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.3/      ----    ------------     --- -----        ---- ------
+0:0000.3/
+0:0000.3/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.3/========== Noise models =========
+0:0000.3/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.3/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.3/              I   1.0      17       0       0       0       0       0
+0:0000.3/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.3/
+0:0000.3/========== Detailed statistics =========
+0:0000.3/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.3/      ----    ------------     --- -----        ---- ------
+0:0000.3/
+0:0000.3/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.3/========== Noise models =========
+0:0000.3/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.3/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.3/              I   1.0      17       0       0       0       0       0
+0:0000.3/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.3/
+0:0000.3/========== Detailed statistics =========
+0:0000.3/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.3/      ----    ------------     --- -----        ---- ------
+0:0000.3/
+0:0000.3/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.3/========== Noise models =========
+0:0000.3/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.3/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.3/              I   1.0      17       0       0       0       0       0
+0:0000.3/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.3/
+0:0000.3/========== Detailed statistics =========
+0:0000.3/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.3/      ----    ------------     --- -----        ---- ------
+0:0000.3/
+0:0000.3/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.3/========== Noise models =========
+0:0000.3/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.3/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.3/              I   1.0      17       0       0       0       0       0
+0:0000.3/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.3/
+0:0000.3/========== Detailed statistics =========
+0:0000.3/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.3/      ----    ------------     --- -----        ---- ------
+0:0000.3/
+0:0000.3/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.3/========== Noise models =========
+0:0000.3/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.3/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.3/              I   1.0      17       1       1       0       0       0
+0:0000.3/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.3/
+0:0000.3/========== Detailed statistics =========
+0:0000.3/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.3/      ----    ------------     --- -----        ---- ------
+0:0000.3/      0.00               I     1.0 5            norm depol_Y
+0:0000.3/
+0:0000.3/Syndrome measurements: 0 0 0 0 0 0 0 0
+0:0000.3/========== Noise models =========
+0:0000.3/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.3/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.3/              I   1.0      17       0       0       0       0       0
+0:0000.3/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.3/
+0:0000.3/========== Detailed statistics =========
+0:0000.3/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.3/      ----    ------------     --- -----        ---- ------
+0:0000.3/
+0:0000.3/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.3/========== Noise models =========
+0:0000.3/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.3/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.3/              I   1.0      17       0       0       0       0       0
+0:0000.3/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.3/
+0:0000.3/========== Detailed statistics =========
+0:0000.3/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.3/      ----    ------------     --- -----        ---- ------
+0:0000.3/
+0:0000.3/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.3/========== Noise models =========
+0:0000.3/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.3/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.3/              I   1.0      17       0       0       0       0       0
+0:0000.3/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.3/
+0:0000.3/========== Detailed statistics =========
+0:0000.3/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.3/      ----    ------------     --- -----        ---- ------
+0:0000.3/
+0:0000.3/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.4/========== Noise models =========
+0:0000.4/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.4/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.4/              I   1.0      17       0       0       0       0       0
+0:0000.4/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.4/
+0:0000.4/========== Detailed statistics =========
+0:0000.4/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.4/      ----    ------------     --- -----        ---- ------
+0:0000.4/
+0:0000.4/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.4/========== Noise models =========
+0:0000.4/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.4/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.4/              I   1.0      17       0       0       0       0       0
+0:0000.4/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.4/
+0:0000.4/========== Detailed statistics =========
+0:0000.4/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.4/      ----    ------------     --- -----        ---- ------
+0:0000.4/
+0:0000.4/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.4/========== Noise models =========
+0:0000.4/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.4/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.4/              I   1.0      17       0       0       0       0       0
+0:0000.4/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.4/
+0:0000.4/========== Detailed statistics =========
+0:0000.4/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.4/      ----    ------------     --- -----        ---- ------
+0:0000.4/
+0:0000.4/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.4/========== Noise models =========
+0:0000.4/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.4/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.4/              I   1.0      17       0       0       0       0       0
+0:0000.4/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.4/
+0:0000.4/========== Detailed statistics =========
+0:0000.4/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.4/      ----    ------------     --- -----        ---- ------
+0:0000.4/
+0:0000.4/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.4/========== Noise models =========
+0:0000.4/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.4/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.4/              I   1.0      17       0       0       0       0       0
+0:0000.4/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.4/
+0:0000.4/========== Detailed statistics =========
+0:0000.4/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.4/      ----    ------------     --- -----        ---- ------
+0:0000.4/
+0:0000.4/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.4/========== Noise models =========
+0:0000.4/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.4/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.4/              I   1.0      17       0       0       0       0       0
+0:0000.4/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.4/
+0:0000.4/========== Detailed statistics =========
+0:0000.4/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.4/      ----    ------------     --- -----        ---- ------
+0:0000.4/
+0:0000.4/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.4/========== Noise models =========
+0:0000.4/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.4/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.4/              I   1.0      17       0       0       0       0       0
+0:0000.4/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.4/
+0:0000.4/========== Detailed statistics =========
+0:0000.4/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.4/      ----    ------------     --- -----        ---- ------
+0:0000.4/
+0:0000.4/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.4/========== Noise models =========
+0:0000.4/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.4/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.4/              I   1.0      17       0       0       0       0       0
+0:0000.4/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.4/
+0:0000.4/========== Detailed statistics =========
+0:0000.4/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.4/      ----    ------------     --- -----        ---- ------
+0:0000.4/
+0:0000.4/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.4/========== Noise models =========
+0:0000.4/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.4/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.4/              I   1.0      17       0       0       0       0       0
+0:0000.4/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.4/
+0:0000.4/========== Detailed statistics =========
+0:0000.4/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.4/      ----    ------------     --- -----        ---- ------
+0:0000.4/
+0:0000.4/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.5/========== Noise models =========
+0:0000.5/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.5/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.5/              I   1.0      17       1       1       0       0       0
+0:0000.5/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.5/
+0:0000.5/========== Detailed statistics =========
+0:0000.5/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.5/      ----    ------------     --- -----        ---- ------
+0:0000.5/      0.00               I     1.0 5            norm depol_Y
+0:0000.5/
+0:0000.5/Syndrome measurements: 0 0 0 0 0 0 0 0
+0:0000.5/========== Noise models =========
+0:0000.5/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.5/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.5/              I   1.0      17       0       0       0       0       0
+0:0000.5/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.5/
+0:0000.5/========== Detailed statistics =========
+0:0000.5/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.5/      ----    ------------     --- -----        ---- ------
+0:0000.5/
+0:0000.5/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.5/========== Noise models =========
+0:0000.5/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.5/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.5/              I   1.0      17       0       0       0       0       0
+0:0000.5/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.5/
+0:0000.5/========== Detailed statistics =========
+0:0000.5/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.5/      ----    ------------     --- -----        ---- ------
+0:0000.5/
+0:0000.5/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.5/========== Noise models =========
+0:0000.5/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.5/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.5/              I   1.0      17       0       0       0       0       0
+0:0000.5/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.5/
+0:0000.5/========== Detailed statistics =========
+0:0000.5/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.5/      ----    ------------     --- -----        ---- ------
+0:0000.5/
+0:0000.5/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.5/========== Noise models =========
+0:0000.5/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.5/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.5/              I   1.0      17       0       0       0       0       0
+0:0000.5/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.5/
+0:0000.5/========== Detailed statistics =========
+0:0000.5/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.5/      ----    ------------     --- -----        ---- ------
+0:0000.5/
+0:0000.5/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.5/========== Noise models =========
+0:0000.5/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.5/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.5/              I   1.0      17       0       0       0       0       0
+0:0000.5/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.5/
+0:0000.5/========== Detailed statistics =========
+0:0000.5/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.5/      ----    ------------     --- -----        ---- ------
+0:0000.5/
+0:0000.5/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.5/========== Noise models =========
+0:0000.5/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.5/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.5/              I   1.0      17       0       0       0       0       0
+0:0000.5/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.5/
+0:0000.5/========== Detailed statistics =========
+0:0000.5/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.5/      ----    ------------     --- -----        ---- ------
+0:0000.5/
+0:0000.5/Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.5/========== Noise models =========
+0:0000.5/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.5/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.5/              I   1.0      17       0       0       0       0       0
+0:0000.5/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.5/
+0:0000.5/========== Detailed statistics =========
+0:0000.5/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.5/      ----    ------------     --- -----        ---- ------
+0:0000.5/
+0:0000.5/Decoding the Logical State
+0:0000.5/MD3 = 1 and MD5 = 0
+0:0000.5/X needed
+0:0000.5/Doing Tomography (this destroys the surface, i.e. you cannot do tomography and carry on with other operations).
+0:0000.5/=============== Logging to: Liquid.log closed ================

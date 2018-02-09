@@ -223,10 +223,36 @@ module UserSample =
         circ.Dump()
         circ.RenderHT("Test")
 
+        // Create noise model
+        // Probabilities for our two types of noise
+        let circN    = Circuit.Compile (fun (qs:Qubits) -> I >< qs) ket.Qubits //noise channel
+        let probDamp        = 0.0        //amplitude damping noise
+        let probPolar       = 2.e-3   //depolaried noise
 
-        for i in 0..5 do
+        let mkM (p:float) (g:string) (mx:int) = {Noise.DefaultNoise p with gate=g;maxQs=mx}
+        let models      = [
+            //mkM 0.0             "H"         1
+            //mkM 0.0             "CNOT"      2
+            mkM probPolar       "I"         1
+        ]
+
+        let noise           = Noise(circN,ket,models)
+        
+        ket.TraceRun       <- 0         // 1=log 2=console
+        noise.LogGates     <- false     // Show each gate execute?
+        noise.TraceWrap    <- false
+        noise.TraceNoise   <- false
+        noise.DampProb(1)  <- probDamp  // apply damping error on qubit 1
+        noise.DampProb(2)  <- probDamp
+        noise.DampProb(3)  <- probDamp            
+        // End noise model
+
+
+        for i in 0..50 do
+            noise.Run ket
             circ.Run surface
-            if i <> 5 then   //this condition is here because at the last step we need to do decoding
+            noise.Dump(showInd,0,true)
+            if i <> 50 then   //this condition is here because at the last step we need to do decoding
                 show "Syndrome measurements: %d %d %d %d %d %d %d %d" surface.[0].Bit.v surface.[4].Bit.v surface.[5].Bit.v surface.[6].Bit.v surface.[10].Bit.v surface.[11].Bit.v surface.[12].Bit.v surface.[16].Bit.v
                 Reset Zero [surface.[0]]; Reset Zero [surface.[4]]; Reset Zero [surface.[5]]; Reset Zero [surface.[6]]; Reset Zero [surface.[10]]; Reset Zero [surface.[11]]; Reset Zero [surface.[12]]; Reset Zero [surface.[16]];
             //if i=2 then
@@ -262,8 +288,8 @@ module UserSample =
         for i in 0..16 do
             if i <> 8 then
                 Reset Zero [surface.[i]];
-        let v = ket.Single()
-        dump false 0 v
+        //let v = ket.Single()
+        //dump false 0 v
 
 
 module Main =
