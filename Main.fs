@@ -215,8 +215,9 @@ module UserSample =
         let mutable prev_syndrome =  [|0; 0; 0; 0; 0; 0; 0; 0|];
         let mutable new_syndrome = [|0; 0; 0; 0; 0; 0; 0; 0|];
         let mutable changes = [|0; 0; 0; 0; 0; 0; 0; 0|];
-        let ket               = Ket(17)
-        let surface           = ket.Reset(17)
+        let ket               = Ket(17);
+        let surface           = ket.Reset(17);
+        let mutable flag = 0;
         //State Injection
         Rpauli (Math.PI/8.) Y surface.[8..8]; 
         //let v = ket.Single()    // Uncomment this line and the following line to see the state after injection
@@ -261,29 +262,29 @@ module UserSample =
                 new_syndrome <- [|surface.[0].Bit.v; surface.[4].Bit.v; surface.[5].Bit.v; surface.[6].Bit.v; surface.[10].Bit.v; surface.[11].Bit.v; surface.[12].Bit.v; surface.[16].Bit.v |];
                 if i = 0 then prev_syndrome <- new_syndrome;
                 changes <- [| for k in 0..7 -> prev_syndrome.[k] ^^^ new_syndrome.[k]|]; //^^^ is an xor
-                if (changes.[0] = 1) && (changes.[2] = 0) then show "Z error on data qubit 2 occurred"; Z ket.Qubits.[3..3]; new_syndrome <- [|surface.[0].Bit.v; surface.[4].Bit.v; surface.[5].Bit.v; surface.[6].Bit.v; surface.[10].Bit.v; surface.[11].Bit.v; surface.[12].Bit.v; surface.[16].Bit.v |]; changes <- [| for k in 0..7 -> prev_syndrome.[k] ^^^ new_syndrome.[k]|]; //^^^ is an xor
-                if (changes.[0] = 1) && (changes.[2] = 1) then show "Z error on data qubit 1 occurred"; Z ket.Qubits.[2..2]; new_syndrome <- [|surface.[0].Bit.v; surface.[4].Bit.v; surface.[5].Bit.v; surface.[6].Bit.v; surface.[10].Bit.v; surface.[11].Bit.v; surface.[12].Bit.v; surface.[16].Bit.v |]; changes <- [| for k in 0..7 -> prev_syndrome.[k] ^^^ new_syndrome.[k]|]; //^^^ is an xor
-                if (changes.[1] = 1) && (changes.[4] = 0) then show "X error on data qubit 0 occurred"; X ket.Qubits.[1..1]; new_syndrome <- [|surface.[0].Bit.v; surface.[4].Bit.v; surface.[5].Bit.v; surface.[6].Bit.v; surface.[10].Bit.v; surface.[11].Bit.v; surface.[12].Bit.v; surface.[16].Bit.v |]; changes <- [| for k in 0..7 -> prev_syndrome.[k] ^^^ new_syndrome.[k]|]; //^^^ is an xor
-                if (changes.[1] = 1) && (changes.[4] = 1) then show "X error on data qubit 3 occurred"; X ket.Qubits.[7..7]; new_syndrome <- [|surface.[0].Bit.v; surface.[4].Bit.v; surface.[5].Bit.v; surface.[6].Bit.v; surface.[10].Bit.v; surface.[11].Bit.v; surface.[12].Bit.v; surface.[16].Bit.v |]; changes <- [| for k in 0..7 -> prev_syndrome.[k] ^^^ new_syndrome.[k]|]; //^^^ is an xor
-                if (changes.[2] = 1) && (changes.[0] = 0) && (changes.[5] = 0) then show "Z error on data qubits 3 or 0 occurred"; Z ket.Qubits.[1..1]; new_syndrome <- [|surface.[0].Bit.v; surface.[4].Bit.v; surface.[5].Bit.v; surface.[6].Bit.v; surface.[10].Bit.v; surface.[11].Bit.v; surface.[12].Bit.v; surface.[16].Bit.v |]; changes <- [| for k in 0..7 -> prev_syndrome.[k] ^^^ new_syndrome.[k]|]; //^^^ is an xor
-                if (changes.[2] = 1) && (changes.[0] = 1) && (changes.[5] = 0) then show "Z error on data qubit 1 occurred"; Z ket.Qubits.[2..2]; new_syndrome <- [|surface.[0].Bit.v; surface.[4].Bit.v; surface.[5].Bit.v; surface.[6].Bit.v; surface.[10].Bit.v; surface.[11].Bit.v; surface.[12].Bit.v; surface.[16].Bit.v |]; changes <- [| for k in 0..7 -> prev_syndrome.[k] ^^^ new_syndrome.[k]|]; //^^^ is an xor
-                if (changes.[2] = 1) && (changes.[0] = 0) && (changes.[5] = 1) then show "Z error on data qubit 4 occurred"; Z ket.Qubits.[8..8]; new_syndrome <- [|surface.[0].Bit.v; surface.[4].Bit.v; surface.[5].Bit.v; surface.[6].Bit.v; surface.[10].Bit.v; surface.[11].Bit.v; surface.[12].Bit.v; surface.[16].Bit.v |]; changes <- [| for k in 0..7 -> prev_syndrome.[k] ^^^ new_syndrome.[k]|]; //^^^ is an xor
-                if (changes.[3] = 1) && (changes.[4] = 0) && (changes.[6] = 0) then show "X error on data qubits 1 or 2 occurred"; X ket.Qubits.[2..2]; new_syndrome <- [|surface.[0].Bit.v; surface.[4].Bit.v; surface.[5].Bit.v; surface.[6].Bit.v; surface.[10].Bit.v; surface.[11].Bit.v; surface.[12].Bit.v; surface.[16].Bit.v |]; changes <- [| for k in 0..7 -> prev_syndrome.[k] ^^^ new_syndrome.[k]|]; //^^^ is an xor
-                if (changes.[3] = 1) && (changes.[4] = 1) && (changes.[6] = 0) then show "X error on data qubit 4 occurred"; X ket.Qubits.[8..8]; new_syndrome <- [|surface.[0].Bit.v; surface.[4].Bit.v; surface.[5].Bit.v; surface.[6].Bit.v; surface.[10].Bit.v; surface.[11].Bit.v; surface.[12].Bit.v; surface.[16].Bit.v |]; changes <- [| for k in 0..7 -> prev_syndrome.[k] ^^^ new_syndrome.[k]|]; //^^^ is an xor
-                if (changes.[3] = 1) && (changes.[4] = 0) && (changes.[6] = 1) then show "X error on data qubit 5 occurred"; X ket.Qubits.[9..9]; new_syndrome <- [|surface.[0].Bit.v; surface.[4].Bit.v; surface.[5].Bit.v; surface.[6].Bit.v; surface.[10].Bit.v; surface.[11].Bit.v; surface.[12].Bit.v; surface.[16].Bit.v |]; changes <- [| for k in 0..7 -> prev_syndrome.[k] ^^^ new_syndrome.[k]|]; //^^^ is an xor
-                if (changes.[4] = 1) && (changes.[1] = 0) && (changes.[3] = 0) then show "X error on data qubits 6 or 7 occurred"; X ket.Qubits.[13..13]; new_syndrome <- [|surface.[0].Bit.v; surface.[4].Bit.v; surface.[5].Bit.v; surface.[6].Bit.v; surface.[10].Bit.v; surface.[11].Bit.v; surface.[12].Bit.v; surface.[16].Bit.v |]; changes <- [| for k in 0..7 -> prev_syndrome.[k] ^^^ new_syndrome.[k]|]; //^^^ is an xor
+                if (changes.[0] = 1) && (changes.[2] = 0) then show "Z error on data qubit 2 occurred. Applying fix."; Z ket.Qubits.[3..3]; flag <- 1;
+                if (changes.[0] = 1) && (changes.[2] = 1) then show "Z error on data qubit 1 occurred. Applying fix."; Z ket.Qubits.[2..2]; flag <- 1;
+                if (changes.[1] = 1) && (changes.[4] = 0) then show "X error on data qubit 0 occurred. Applying fix."; X ket.Qubits.[1..1]; flag <- 1;
+                if (changes.[1] = 1) && (changes.[4] = 1) then show "X error on data qubit 3 occurred. Applying fix."; X ket.Qubits.[7..7]; flag <- 1;
+                if (changes.[2] = 1) && (changes.[0] = 0) && (changes.[5] = 0) then show "Z error on data qubits 3 or 0 occurred. Applying fix."; Z ket.Qubits.[1..1]; flag <- 1;
+                if (changes.[2] = 1) && (changes.[0] = 1) && (changes.[5] = 0) then show "Z error on data qubit 1 occurred. Applying fix."; Z ket.Qubits.[2..2]; flag <- 1;
+                if (changes.[2] = 1) && (changes.[0] = 0) && (changes.[5] = 1) then show "Z error on data qubit 4 occurred. Applying fix."; Z ket.Qubits.[8..8]; flag <- 1;
+                if (changes.[3] = 1) && (changes.[4] = 0) && (changes.[6] = 0) then show "X error on data qubits 1 or 2 occurred. Applying fix."; X ket.Qubits.[2..2]; flag <- 1;
+                if (changes.[3] = 1) && (changes.[4] = 1) && (changes.[6] = 0) then show "X error on data qubit 4 occurred. Applying fix."; X ket.Qubits.[8..8]; flag <- 1;
+                if (changes.[3] = 1) && (changes.[4] = 0) && (changes.[6] = 1) then show "X error on data qubit 5 occurred. Applying fix."; X ket.Qubits.[9..9]; flag <- 1;
+                if (changes.[4] = 1) && (changes.[1] = 0) && (changes.[3] = 0) then show "X error on data qubits 6 or 7 occurred. Applying fix."; X ket.Qubits.[13..13]; flag <- 1;
                 //if (changes.[4] = 1) && (changes.[1] = 1) && (changes.[3] = 0) then show "X error on data qubit 3 occurred"; redundant
                 //if (changes.[4] = 1) && (changes.[1] = 0) && (changes.[3] = 1) then show "X error on data qubit 4 occurred"; redundant
-                if (changes.[5] = 1) && (changes.[2] = 0) && (changes.[7] = 0) then show "Z error on data qubits 5 or 8 occurred"; Z ket.Qubits.[9..9]; new_syndrome <- [|surface.[0].Bit.v; surface.[4].Bit.v; surface.[5].Bit.v; surface.[6].Bit.v; surface.[10].Bit.v; surface.[11].Bit.v; surface.[12].Bit.v; surface.[16].Bit.v |]; changes <- [| for k in 0..7 -> prev_syndrome.[k] ^^^ new_syndrome.[k]|]; //^^^ is an xor
+                if (changes.[5] = 1) && (changes.[2] = 0) && (changes.[7] = 0) then show "Z error on data qubits 5 or 8 occurred. Applying fix."; Z ket.Qubits.[9..9]; flag <- 1;
                 //if (changes.[5] = 1) && (changes.[2] = 1) && (changes.[7] = 0) then show "Z error on data qubit 4 occurred"; redundant
-                if (changes.[5] = 1) && (changes.[2] = 0) && (changes.[7] = 1) then show "Z error on data qubit 7 occurred"; Z ket.Qubits.[14..14]; new_syndrome <- [|surface.[0].Bit.v; surface.[4].Bit.v; surface.[5].Bit.v; surface.[6].Bit.v; surface.[10].Bit.v; surface.[11].Bit.v; surface.[12].Bit.v; surface.[16].Bit.v |]; changes <- [| for k in 0..7 -> prev_syndrome.[k] ^^^ new_syndrome.[k]|]; //^^^ is an xor
-                if (changes.[6] = 1) && (changes.[3] = 0) then show "X error on data qubit 8 occurred"; X ket.Qubits.[15..15]; new_syndrome <- [|surface.[0].Bit.v; surface.[4].Bit.v; surface.[5].Bit.v; surface.[6].Bit.v; surface.[10].Bit.v; surface.[11].Bit.v; surface.[12].Bit.v; surface.[16].Bit.v |]; changes <- [| for k in 0..7 -> prev_syndrome.[k] ^^^ new_syndrome.[k]|]; //^^^ is an xor
-                if (changes.[6] = 1) && (changes.[3] = 1) then show "X error on data qubit 5 occurred"; X ket.Qubits.[9..9]; new_syndrome <- [|surface.[0].Bit.v; surface.[4].Bit.v; surface.[5].Bit.v; surface.[6].Bit.v; surface.[10].Bit.v; surface.[11].Bit.v; surface.[12].Bit.v; surface.[16].Bit.v |]; changes <- [| for k in 0..7 -> prev_syndrome.[k] ^^^ new_syndrome.[k]|]; //^^^ is an xor
-                if (changes.[7] = 1) && (changes.[5] = 0) then show "Z error on data qubit 6 occurred"; Z ket.Qubits.[13..13]; new_syndrome <- [|surface.[0].Bit.v; surface.[4].Bit.v; surface.[5].Bit.v; surface.[6].Bit.v; surface.[10].Bit.v; surface.[11].Bit.v; surface.[12].Bit.v; surface.[16].Bit.v |]; changes <- [| for k in 0..7 -> prev_syndrome.[k] ^^^ new_syndrome.[k]|]; //^^^ is an xor
+                if (changes.[5] = 1) && (changes.[2] = 0) && (changes.[7] = 1) then show "Z error on data qubit 7 occurred. Applying fix."; Z ket.Qubits.[14..14]; flag <- 1;
+                if (changes.[6] = 1) && (changes.[3] = 0) then show "X error on data qubit 8 occurred. Applying fix."; X ket.Qubits.[15..15]; flag <- 1;
+                if (changes.[6] = 1) && (changes.[3] = 1) then show "X error on data qubit 5 occurred. Applying fix."; X ket.Qubits.[9..9]; flag <- 1;
+                if (changes.[7] = 1) && (changes.[5] = 0) then show "Z error on data qubit 6 occurred. Applying fix."; Z ket.Qubits.[13..13]; flag <- 1;
                 //if (changes.[7] = 1) && (changes.[5] = 1) then show "Z error on data qubit 7 occurred"; redundant
-                prev_syndrome <- new_syndrome;
+                if flag = 0 then prev_syndrome <- new_syndrome;
+                flag <- 0;
                 
-
                 Reset Zero [surface.[0]]; Reset Zero [surface.[4]]; Reset Zero [surface.[5]]; Reset Zero [surface.[6]]; Reset Zero [surface.[10]]; Reset Zero [surface.[11]]; Reset Zero [surface.[12]]; Reset Zero [surface.[16]];
             //if i=2 then
                 //show "__"
