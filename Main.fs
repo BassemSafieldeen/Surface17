@@ -252,11 +252,11 @@ module UserSample =
         // End noise model
 
 
-        for i in 0..10 do
+        for i in 0..50 do
             noise.Run ket
             circ.Run ket.Qubits
             noise.Dump(showInd,0,true)
-            if i <> 10 then   //this condition is here because at the last step we need to do decoding
+            if i <> 50 then   //this condition is here because at the last step we need to do decoding
                 show "Syndrome measurements: %d %d %d %d %d %d %d %d" surface.[0].Bit.v surface.[4].Bit.v surface.[5].Bit.v surface.[6].Bit.v surface.[10].Bit.v surface.[11].Bit.v surface.[12].Bit.v surface.[16].Bit.v
                 //Implementing Decoder
                 new_syndrome <- [|surface.[0].Bit.v; surface.[4].Bit.v; surface.[5].Bit.v; surface.[6].Bit.v; surface.[10].Bit.v; surface.[11].Bit.v; surface.[12].Bit.v; surface.[16].Bit.v |];
@@ -290,7 +290,7 @@ module UserSample =
                 //show "__"
 
                 //show "Logical H"
-                if i = 6 then H surface.[1..1]; H surface.[2..2]; H surface.[3..3]; H surface.[7..7]; H surface.[8..8]; H surface.[9..9]; H surface.[13..13]; H surface.[14..14]; H surface.[15..15];
+                //H surface.[1..1]; H surface.[2..2]; H surface.[3..3]; H surface.[7..7]; H surface.[8..8]; H surface.[9..9]; H surface.[13..13]; H surface.[14..14]; H surface.[15..15];
                 
                 //show "Logical Z"
                 //Z surface.[1..1]; Z surface.[8..8]; Z surface.[15..15];
@@ -314,7 +314,7 @@ module UserSample =
 
 
         //State Tomography
-        show "Doing Tomography (this destroys the surface, i.e. you cannot do tomography and carry on with other operations)."
+        show "Doing Tomography (this destroys the surface and leaves only the central data qubit, i.e. you cannot do tomography and carry on with other operations)."
         for i in 0..16 do
             if i <> 8 then
                 Reset Zero [surface.[i]];
