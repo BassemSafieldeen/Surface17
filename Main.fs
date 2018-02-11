@@ -142,56 +142,56 @@ module UserSample =
         H >< qs
         //Xs
         //top right
-        CZ [qs.[2]; qs.[5]]
-        CZ [qs.[9]; qs.[11]]
-        CZ [qs.[14]; qs.[16]]
+        CZ [qs.[1]; qs.[11]]
+        CZ [qs.[5]; qs.[14]]
+        CZ [qs.[7]; qs.[16]]
         //top left
-        CZ [qs.[1]; qs.[5]]
-        CZ [qs.[8]; qs.[11]]
-        CZ [qs.[13]; qs.[16]]
+        CZ [qs.[0]; qs.[11]]
+        CZ [qs.[4]; qs.[14]]
+        CZ [qs.[6]; qs.[16]]
         //bottom right
-        CZ [qs.[8]; qs.[5]]
-        CZ [qs.[15]; qs.[11]]
-        CZ [qs.[3]; qs.[0]]
+        CZ [qs.[4]; qs.[11]]
+        CZ [qs.[8]; qs.[14]]
+        CZ [qs.[2]; qs.[9]]
         //bottom left
-        CZ [qs.[7]; qs.[5]]
-        CZ [qs.[14]; qs.[11]]
-        CZ [qs.[2]; qs.[0]]
+        CZ [qs.[3]; qs.[11]]
+        CZ [qs.[7]; qs.[14]]
+        CZ [qs.[1]; qs.[9]]
         
-        H qs.[0..0];        H qs.[1..1];        H qs.[2..2];        H qs.[3..3]  // 4
-        H qs.[5..5]       // 6
-        H qs.[7..7];        H qs.[8..8];        H qs.[9..9]        // 10
-        H qs.[11..11]        // 12
-        H qs.[13..13];        H qs.[14..14];        H qs.[15..15];        H qs.[16..16]
+        H qs.[9..9];        H qs.[0..0];        H qs.[1..1];        H qs.[2..2]  // 4
+        H qs.[11..11]       // 6
+        H qs.[3..3];        H qs.[4..4];        H qs.[5..5]        // 10
+        H qs.[14..14]        // 12
+        H qs.[6..6];        H qs.[7..7];        H qs.[8..8];        H qs.[16..16]
         //Zs
         //top right
-        CZ [qs.[1]; qs.[4]]
-        CZ [qs.[3]; qs.[6]]
-        CZ [qs.[8]; qs.[10]]
+        CZ [qs.[0]; qs.[10]]
+        CZ [qs.[2]; qs.[12]]
+        CZ [qs.[4]; qs.[13]]
         //bottom right
-        CZ [qs.[7]; qs.[4]]
-        CZ [qs.[9]; qs.[6]]
-        CZ [qs.[14]; qs.[10]]
+        CZ [qs.[3]; qs.[10]]
+        CZ [qs.[5]; qs.[12]]
+        CZ [qs.[7]; qs.[13]]
         //top left
-        CZ [qs.[12]; qs.[9]]
-        CZ [qs.[10]; qs.[7]]
-        CZ [qs.[6]; qs.[2]]
+        CZ [qs.[15]; qs.[5]]
+        CZ [qs.[13]; qs.[3]]
+        CZ [qs.[12]; qs.[1]]
         //bottom left
-        CZ [qs.[8]; qs.[6]]
-        CZ [qs.[13]; qs.[10]]
-        CZ [qs.[15]; qs.[12]]
+        CZ [qs.[4]; qs.[12]]
+        CZ [qs.[6]; qs.[13]]
+        CZ [qs.[8]; qs.[15]]
 
-        H qs.[4..4];         H qs.[6..6];        H qs.[10..10];        H qs.[12..12]
+        H qs.[10..10];         H qs.[12..12];        H qs.[13..13];        H qs.[15..15]
 
 
-        M qs.[0..0]
-        M qs.[5..5]
+        M qs.[9..9]
         M qs.[11..11]
+        M qs.[14..14]
         M qs.[16..16]
-        M qs.[4..4]
-        M qs.[6..6]
         M qs.[10..10]
         M qs.[12..12]
+        M qs.[13..13]
+        M qs.[15..15]
 
     let sb              = StringBuilder()
     let app (x:string)  = sb.Append x |> ignore
@@ -224,29 +224,29 @@ module UserSample =
         let surface           = ket.Reset(17);
         let mutable flag = 0;
 
-        // ======  section for controlled parameter ========
+
         let theta           = Math.PI*0.89        //specify the single qubit state to be injected
         let phi             = Math.PI*1.56        //specify the single qubit state to be injected
-        let probDamp        = 1.e-2             //amplitude damping noise
-        let probPolar       = 0.//1.e-2         //depolaried noise
+        let probDamp        = 0.//2.e-2             //amplitude damping noise
+        let probPolar       = 1.e-2         //depolaried noise
         let N_cycle         = 50
 
         //Prepare arbitrary single qubit state
-        Rpauli (-theta) Y surface.[8..8]; 
-        Rpauli (phi) Z surface.[8..8];
+        Rpauli (-theta) Y surface.[4..4]; 
+        Rpauli (phi) Z surface.[4..4];
         let v = ket.Single()    // Uncomment this line and the following line to see the state after injection
         show "  Initial state of data qubit 4 = "
         dump true 0 v
         Console.ReadLine() |> ignore
         //State Injection
-        CNOT [surface.[8]; surface.[6]]; CNOT [surface.[8]; surface.[10]]; SWAP [surface.[2]; surface.[6]]; SWAP [surface.[10]; surface.[14]];  //State Injection
+        CNOT [surface.[4]; surface.[12]]; CNOT [surface.[4]; surface.[13]]; SWAP [surface.[1]; surface.[12]]; SWAP [surface.[13]; surface.[7]];  //State Injection
         let circ        = Circuit.Compile Stabilize ket.Qubits
         circ.Dump()
         circ.RenderHT("Test")
 
         // Create noise model
         // Probabilities for our two types of noise
-        let circN    = Circuit.Compile (fun (qs:Qubits) -> I qs.[1..1]; I qs.[2..2];I qs.[3..3];I qs.[7..7];I qs.[8..8]; I qs.[9..9]; I qs.[13..13]; I qs.[14..14];I qs.[15..15];) ket.Qubits //noise channel
+        let circN    = Circuit.Compile (fun (qs:Qubits) -> I qs.[0..0];I qs.[1..1]; I qs.[2..2];I qs.[3..3];I qs.[4..4];I qs.[5..5];I qs.[6..6];I qs.[7..7];I qs.[8..8]; ) ket.Qubits //noise channel
         
 
         let mkM (p:float) (g:string) (mx:int) = {Noise.DefaultNoise p with gate=g;maxQs=mx}
@@ -258,9 +258,9 @@ module UserSample =
         noise.LogGates     <- false     // Show each gate execute?
         noise.TraceWrap    <- false
         noise.TraceNoise   <- false
-        noise.DampProb(1)  <- probDamp ; noise.DampProb(2)  <- probDamp; noise.DampProb(3)  <- probDamp;// apply damping error on qubit 1
-        noise.DampProb(7)  <- probDamp ; noise.DampProb(8)  <- probDamp; noise.DampProb(9)  <- probDamp;
-        noise.DampProb(13)  <- probDamp ; noise.DampProb(14)  <- probDamp; noise.DampProb(15)  <- probDamp;             
+        noise.DampProb(0)  <- probDamp ; noise.DampProb(1)  <- probDamp; noise.DampProb(2)  <- probDamp;// apply damping error on qubit 1
+        noise.DampProb(3)  <- probDamp ; noise.DampProb(4)  <- probDamp; noise.DampProb(5)  <- probDamp;
+        noise.DampProb(6)  <- probDamp ; noise.DampProb(7)  <- probDamp; noise.DampProb(8)  <- probDamp;             
         // End noise model
 
 
@@ -269,67 +269,67 @@ module UserSample =
             circ.Run ket.Qubits
             noise.Dump(showInd,0,true)
             if i <> N_cycle then   //this condition is here because at the last step we need to do decoding
-                show "Syndrome measurements: %d %d %d %d %d %d %d %d" surface.[0].Bit.v surface.[4].Bit.v surface.[5].Bit.v surface.[6].Bit.v surface.[10].Bit.v surface.[11].Bit.v surface.[12].Bit.v surface.[16].Bit.v
+                show " At round %i, Syndrome measurements: %d %d %d %d %d %d %d %d" i surface.[9].Bit.v surface.[10].Bit.v surface.[11].Bit.v surface.[12].Bit.v surface.[13].Bit.v surface.[14].Bit.v surface.[15].Bit.v surface.[16].Bit.v
                 //Implementing Decoder
-                new_syndrome <- [|surface.[0].Bit.v; surface.[4].Bit.v; surface.[5].Bit.v; surface.[6].Bit.v; surface.[10].Bit.v; surface.[11].Bit.v; surface.[12].Bit.v; surface.[16].Bit.v |];
+                new_syndrome <- [|surface.[9].Bit.v; surface.[10].Bit.v; surface.[11].Bit.v; surface.[12].Bit.v; surface.[13].Bit.v; surface.[14].Bit.v; surface.[15].Bit.v; surface.[16].Bit.v |];
                 if i = 0 then prev_syndrome <- new_syndrome;
                 changes <- [| for k in 0..7 -> prev_syndrome.[k] ^^^ new_syndrome.[k]|]; //^^^ is an xor
-                if (changes.[0] = 1) && (changes.[2] = 0) then show "Z error on data qubit 2 occurred. Applying fix."; Z ket.Qubits.[3..3]; flag <- 1;
-                if (changes.[0] = 1) && (changes.[2] = 1) then show "Z error on data qubit 1 occurred. Applying fix."; Z ket.Qubits.[2..2]; flag <- 1;
-                if (changes.[1] = 1) && (changes.[4] = 0) then show "X error on data qubit 0 occurred. Applying fix."; X ket.Qubits.[1..1]; flag <- 1;
-                if (changes.[1] = 1) && (changes.[4] = 1) then show "X error on data qubit 3 occurred. Applying fix."; X ket.Qubits.[7..7]; flag <- 1;
-                if (changes.[2] = 1) && (changes.[0] = 0) && (changes.[5] = 0) then show "Z error on data qubits 3 or 0 occurred. Applying fix."; Z ket.Qubits.[1..1]; flag <- 1;
-                //if (changes.[2] = 1) && (changes.[0] = 1) && (changes.[5] = 0) then show "Z error on data qubit 1 occurred. Applying fix."; Z ket.Qubits.[2..2]; flag <- 1; redundant
-                if (changes.[2] = 1) && (changes.[0] = 0) && (changes.[5] = 1) then show "Z error on data qubit 4 occurred. Applying fix."; Z ket.Qubits.[8..8]; flag <- 1;
-                if (changes.[3] = 1) && (changes.[4] = 0) && (changes.[6] = 0) then show "X error on data qubits 1 or 2 occurred. Applying fix."; X ket.Qubits.[2..2]; flag <- 1;
-                if (changes.[3] = 1) && (changes.[4] = 1) && (changes.[6] = 0) then show "X error on data qubit 4 occurred. Applying fix."; X ket.Qubits.[8..8]; flag <- 1;
-                //if (changes.[3] = 1) && (changes.[4] = 0) && (changes.[6] = 1) then show "X error on data qubit 5 occurred. Applying fix."; X ket.Qubits.[9..9]; flag <- 1; redundant
-                if (changes.[4] = 1) && (changes.[1] = 0) && (changes.[3] = 0) then show "X error on data qubits 6 or 7 occurred. Applying fix."; X ket.Qubits.[13..13]; flag <- 1;
+                if (changes.[0] = 1) && (changes.[2] = 0) then show "Z error on data qubit 2 occurred. Applying fix."; Z ket.Qubits.[2..2]; flag <- 1;
+                if (changes.[0] = 1) && (changes.[2] = 1) then show "Z error on data qubit 1 occurred. Applying fix."; Z ket.Qubits.[1..1]; flag <- 1;
+                if (changes.[1] = 1) && (changes.[4] = 0) then show "X error on data qubit 0 occurred. Applying fix."; X ket.Qubits.[0..0]; flag <- 1;
+                if (changes.[1] = 1) && (changes.[4] = 1) then show "X error on data qubit 3 occurred. Applying fix."; X ket.Qubits.[3..3]; flag <- 1;
+                if (changes.[2] = 1) && (changes.[0] = 0) && (changes.[5] = 0) then show "Z error on data qubits 3 or 0 occurred. Applying fix."; Z ket.Qubits.[0..0]; flag <- 1;
+                //if (changes.[2] = 1) && (changes.[0] = 1) && (changes.[5] = 0) then show "Z error on data qubit 1 occurred. Applying fix."; Z ket.Qubits.[1..1]; flag <- 1; redundant
+                if (changes.[2] = 1) && (changes.[0] = 0) && (changes.[5] = 1) then show "Z error on data qubit 4 occurred. Applying fix."; Z ket.Qubits.[4..4]; flag <- 1;
+                if (changes.[3] = 1) && (changes.[4] = 0) && (changes.[6] = 0) then show "X error on data qubits 1 or 2 occurred. Applying fix."; X ket.Qubits.[1..1]; flag <- 1;
+                if (changes.[3] = 1) && (changes.[4] = 1) && (changes.[6] = 0) then show "X error on data qubit 4 occurred. Applying fix."; X ket.Qubits.[4..4]; flag <- 1;
+                //if (changes.[3] = 1) && (changes.[4] = 0) && (changes.[6] = 1) then show "X error on data qubit 5 occurred. Applying fix."; X ket.Qubits.[5..5]; flag <- 1; redundant
+                if (changes.[4] = 1) && (changes.[1] = 0) && (changes.[3] = 0) then show "X error on data qubits 6 or 7 occurred. Applying fix."; X ket.Qubits.[6..6]; flag <- 1;
                 //if (changes.[4] = 1) && (changes.[1] = 1) && (changes.[3] = 0) then show "X error on data qubit 3 occurred"; redundant
                 //if (changes.[4] = 1) && (changes.[1] = 0) && (changes.[3] = 1) then show "X error on data qubit 4 occurred"; redundant
-                if (changes.[5] = 1) && (changes.[2] = 0) && (changes.[7] = 0) then show "Z error on data qubits 5 or 8 occurred. Applying fix."; Z ket.Qubits.[9..9]; flag <- 1;
+                if (changes.[5] = 1) && (changes.[2] = 0) && (changes.[7] = 0) then show "Z error on data qubits 5 or 8 occurred. Applying fix."; Z ket.Qubits.[8..8]; flag <- 1;
                 //if (changes.[5] = 1) && (changes.[2] = 1) && (changes.[7] = 0) then show "Z error on data qubit 4 occurred"; redundant
-                if (changes.[5] = 1) && (changes.[2] = 0) && (changes.[7] = 1) then show "Z error on data qubit 7 occurred. Applying fix."; Z ket.Qubits.[14..14]; flag <- 1;
-                if (changes.[6] = 1) && (changes.[3] = 0) then show "X error on data qubit 8 occurred. Applying fix."; X ket.Qubits.[15..15]; flag <- 1;
-                if (changes.[6] = 1) && (changes.[3] = 1) then show "X error on data qubit 5 occurred. Applying fix."; X ket.Qubits.[9..9]; flag <- 1;
-                if (changes.[7] = 1) && (changes.[5] = 0) then show "Z error on data qubit 6 occurred. Applying fix."; Z ket.Qubits.[13..13]; flag <- 1;
+                if (changes.[5] = 1) && (changes.[2] = 0) && (changes.[7] = 1) then show "Z error on data qubit 7 occurred. Applying fix."; Z ket.Qubits.[7..7]; flag <- 1;
+                if (changes.[6] = 1) && (changes.[3] = 0) then show "X error on data qubit 8 occurred. Applying fix."; X ket.Qubits.[8..8]; flag <- 1;
+                if (changes.[6] = 1) && (changes.[3] = 1) then show "X error on data qubit 5 occurred. Applying fix."; X ket.Qubits.[5..5]; flag <- 1;
+                if (changes.[7] = 1) && (changes.[5] = 0) then show "Z error on data qubit 6 occurred. Applying fix."; Z ket.Qubits.[6..6]; flag <- 1;
                 //if (changes.[7] = 1) && (changes.[5] = 1) then show "Z error on data qubit 7 occurred"; redundant
                 if flag = 0 then prev_syndrome <- new_syndrome;
                 if flag = 1 then Console.ReadLine() |> ignore
                 flag <- 0;
                 
-                Reset Zero [surface.[0]]; Reset Zero [surface.[4]]; Reset Zero [surface.[5]]; Reset Zero [surface.[6]]; Reset Zero [surface.[10]]; Reset Zero [surface.[11]]; Reset Zero [surface.[12]]; Reset Zero [surface.[16]];
+                Reset Zero [surface.[9]]; Reset Zero [surface.[10]]; Reset Zero [surface.[11]]; Reset Zero [surface.[12]]; Reset Zero [surface.[13]]; Reset Zero [surface.[14]]; Reset Zero [surface.[15]]; Reset Zero [surface.[16]];
             //if i=2 then
                 //show "__"
 
                 //show "Logical H"
-                //H surface.[1..1]; H surface.[2..2]; H surface.[3..3]; H surface.[7..7]; H surface.[8..8]; H surface.[9..9]; H surface.[13..13]; H surface.[14..14]; H surface.[15..15];
+                //H surface.[0..0]; H surface.[1..1]; H surface.[2..2]; H surface.[3..3]; H surface.[4..4]; H surface.[5..5]; H surface.[6..6]; H surface.[7..7]; H surface.[8..8];
                 
                 //show "Logical Z"
-                //Z surface.[1..1]; Z surface.[8..8]; Z surface.[15..15];
+                //Z surface.[0..0]; Z surface.[4..4]; Z surface.[8..8];
 
                 //show "Logical X"
-                //X surface.[3..3]; X surface.[8..8]; X surface.[13..13];
+                //X surface.[2..2]; X surface.[4..4]; X surface.[6..6];
 
         //Decoding the logical State
         show "Decoding the Logical State"
-        //show "MA3 = %d and MA4 = %d" surface.[6].Bit.v        ` surface.[10].Bit.v
-        M surface.[7..7]; M surface.[9..9];
-        show "MD3 = %d and MD5 = %d" surface.[7].Bit.v surface.[9].Bit.v
-        if ((surface.[7].Bit.v + surface.[9].Bit.v)%2) = 0 then
+        //show "MA3 = %d and MA4 = %d" surface.[12].Bit.v        ` surface.[13].Bit.v
+        M surface.[3..3]; M surface.[5..5];
+        show "MD3 = %d and MD5 = %d" surface.[3].Bit.v surface.[5].Bit.v
+        if ((surface.[3].Bit.v + surface.[5].Bit.v)%2) = 0 then
             show "No X needed"
         else 
             show "X needed"
-            X surface.[8..8]
-        CNOT [surface.[8]; surface.[2]]; CNOT [surface.[8]; surface.[14]];// SWAP [surface.[2]; surface.[6]]; SWAP [surface.[10]; surface.[14]]; 
-        M surface.[1..1]; M surface.[2..2]; M surface.[3..3]; M surface.[13..13]; M surface.[14..14]; M surface.[15..15];
+            X surface.[4..4]
+        CNOT [surface.[4]; surface.[1]]; CNOT [surface.[4]; surface.[7]];// SWAP [surface.[1]; surface.[12]]; SWAP [surface.[7]; surface.[13]]; 
+        M surface.[0..0]; M surface.[1..1]; M surface.[2..2]; M surface.[6..6]; M surface.[7..7]; M surface.[8..8];
         //collapse all the other qubits. If there's entanglement between surf[8] then this would differ from just measure surf[8] 
 
 
         //State Tomography
         show "Doing Tomography (this destroys the surface and leaves only the central data qubit, i.e. you cannot do tomography and carry on with other operations)."
         for i in 0..16 do
-            if i <> 8 then
+            if i <> 4 then
                 Reset Zero [surface.[i]];
         let v = ket.Single()
         show "  Final state of data qubit 4 = "
