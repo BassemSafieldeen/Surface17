@@ -73,7 +73,7 @@
     <WarningLevel>3</WarningLevel>
     <DocumentationFile>bin\Debug\LiquidAzure.XML</DocumentationFile>
     <Prefer32Bit>true</Prefer32Bit>
-    <StartArguments>__Shor(15,true)</StartArguments>
+    <StartArguments>__Surface_17()</StartArguments>
     <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">

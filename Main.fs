@@ -203,8 +203,13 @@ module UserSample =
         for i in 0UL..v.Length-1UL do
             //app ", "
             if m = true then
-                if v.[i].r <> 0.0 then sprintf ", i=%4d" i |> app; sprintf "%7.3f" v.[i].r |> app  // get the real part of v.[i]
-                if v.[i].i <> 0.0 then sprintf ", i=%4d" i |> app; sprintf "+%7.3f i" v.[i].i |> app  // get the real part of v.[i]
+                if v.[i].r <> 0.0 || v.[i].i <> 0.0 then 
+                    sprintf "  C_%i = " i |> app
+                    if v.[i].r <> 0.0 then sprintf "%4.3f" v.[i].r |> app  // get the real part of v.[i]
+                    if v.[i].i <> 0.0 then
+                        if v.[i].i > 0.0 then sprintf "+%4.3f i" v.[i].i |> app  // get the real part of v.[i]
+                        else sprintf "%4.3f i" v.[i].i |> app  
+                    sprintf "  ,  " |> app
             if m = false then
                 if v.[i].MCC <> 0.0 then sprintf ", i=%4d" i |> app; sprintf " MCC=%7.5f" v.[i].MCC |> app  // get the real part of v.[i]
         show "%O" sb
@@ -218,10 +223,22 @@ module UserSample =
         let ket               = Ket(17);
         let surface           = ket.Reset(17);
         let mutable flag = 0;
-        //State Injection
-        //Rpauli (Math.PI/8.) Y surface.[8..8]; 
+
+        // ======  section for controlled parameter ========
+        let theta           = Math.PI*0.89        //specify the single qubit state to be injected
+        let phi             = Math.PI*1.56        //specify the single qubit state to be injected
+        let probDamp        = 1.e-2             //amplitude damping noise
+        let probPolar       = 0.//1.e-2         //depolaried noise
+        let N_cycle         = 50
+
+        //Prepare arbitrary single qubit state
+        Rpauli (-theta) Y surface.[8..8]; 
+        Rpauli (phi) Z surface.[8..8];
         let v = ket.Single()    // Uncomment this line and the following line to see the state after injection
-        dump false 0 v
+        show "  Initial state of data qubit 4 = "
+        dump true 0 v
+        Console.ReadLine() |> ignore
+        //State Injection
         CNOT [surface.[8]; surface.[6]]; CNOT [surface.[8]; surface.[10]]; SWAP [surface.[2]; surface.[6]]; SWAP [surface.[10]; surface.[14]];  //State Injection
         let circ        = Circuit.Compile Stabilize ket.Qubits
         circ.Dump()
@@ -229,16 +246,11 @@ module UserSample =
 
         // Create noise model
         // Probabilities for our two types of noise
-        let circN    = Circuit.Compile (fun (qs:Qubits) -> I >< qs) ket.Qubits //noise channel
-        let probDamp        = 0.0        //amplitude damping noise
-        let probPolar       = 2.e-3   //depolaried noise
+        let circN    = Circuit.Compile (fun (qs:Qubits) -> I qs.[1..1]; I qs.[2..2];I qs.[3..3];I qs.[7..7];I qs.[8..8]; I qs.[9..9]; I qs.[13..13]; I qs.[14..14];I qs.[15..15];) ket.Qubits //noise channel
+        
 
         let mkM (p:float) (g:string) (mx:int) = {Noise.DefaultNoise p with gate=g;maxQs=mx}
-        let models      = [
-            //mkM 0.0             "H"         1
-            //mkM 0.0             "CNOT"      2
-            mkM probPolar       "I"         1
-        ]
+        let models      = [  mkM probPolar "I" 1 ]
 
         let noise           = Noise(circN,ket,models)
         
@@ -246,17 +258,17 @@ module UserSample =
         noise.LogGates     <- false     // Show each gate execute?
         noise.TraceWrap    <- false
         noise.TraceNoise   <- false
-        noise.DampProb(1)  <- probDamp  // apply damping error on qubit 1
-        noise.DampProb(2)  <- probDamp
-        noise.DampProb(3)  <- probDamp            
+        noise.DampProb(1)  <- probDamp ; noise.DampProb(2)  <- probDamp; noise.DampProb(3)  <- probDamp;// apply damping error on qubit 1
+        noise.DampProb(7)  <- probDamp ; noise.DampProb(8)  <- probDamp; noise.DampProb(9)  <- probDamp;
+        noise.DampProb(13)  <- probDamp ; noise.DampProb(14)  <- probDamp; noise.DampProb(15)  <- probDamp;             
         // End noise model
 
 
-        for i in 0..50 do
-            noise.Run ket
+        for i in 0..N_cycle do
+            if i <>0 then noise.Run ket
             circ.Run ket.Qubits
             noise.Dump(showInd,0,true)
-            if i <> 50 then   //this condition is here because at the last step we need to do decoding
+            if i <> N_cycle then   //this condition is here because at the last step we need to do decoding
                 show "Syndrome measurements: %d %d %d %d %d %d %d %d" surface.[0].Bit.v surface.[4].Bit.v surface.[5].Bit.v surface.[6].Bit.v surface.[10].Bit.v surface.[11].Bit.v surface.[12].Bit.v surface.[16].Bit.v
                 //Implementing Decoder
                 new_syndrome <- [|surface.[0].Bit.v; surface.[4].Bit.v; surface.[5].Bit.v; surface.[6].Bit.v; surface.[10].Bit.v; surface.[11].Bit.v; surface.[12].Bit.v; surface.[16].Bit.v |];
@@ -283,6 +295,7 @@ module UserSample =
                 if (changes.[7] = 1) && (changes.[5] = 0) then show "Z error on data qubit 6 occurred. Applying fix."; Z ket.Qubits.[13..13]; flag <- 1;
                 //if (changes.[7] = 1) && (changes.[5] = 1) then show "Z error on data qubit 7 occurred"; redundant
                 if flag = 0 then prev_syndrome <- new_syndrome;
+                if flag = 1 then Console.ReadLine() |> ignore
                 flag <- 0;
                 
                 Reset Zero [surface.[0]]; Reset Zero [surface.[4]]; Reset Zero [surface.[5]]; Reset Zero [surface.[6]]; Reset Zero [surface.[10]]; Reset Zero [surface.[11]]; Reset Zero [surface.[12]]; Reset Zero [surface.[16]];
@@ -319,7 +332,8 @@ module UserSample =
             if i <> 8 then
                 Reset Zero [surface.[i]];
         let v = ket.Single()
-        dump false 0 v
+        show "  Final state of data qubit 4 = "
+        dump true 0 v
 
 
 module Main =
