@@ -1,528 +1,424 @@
 0:0000.0/=============== Logging to: Liquid.log opened ================
-0:0000.0/  Initial state of data qubit 4 = 
-0:0000.0/  C_0 = 0.454  ,    C_4096 = 0.891  ,  
-0:0000.1/SEQ
-0:0000.1/  APPLY
-0:0000.1/    GATE H is a  (Normal) 
-0:0000.1/      0.7071 0.7071 
-0:0000.1/      0.7071 -0.7071 
-0:0000.1/    WIRE(Id:0)
-0:0000.1/  APPLY
-0:0000.1/    GATE H is a  (Normal) 
-0:0000.1/      0.7071 0.7071 
-0:0000.1/      0.7071 -0.7071 
-0:0000.1/    WIRE(Id:1)
-0:0000.1/  APPLY
-0:0000.1/    GATE H is a  (Normal) 
-0:0000.1/      0.7071 0.7071 
-0:0000.1/      0.7071 -0.7071 
-0:0000.1/    WIRE(Id:2)
-0:0000.1/  APPLY
-0:0000.1/    GATE H is a  (Normal) 
-0:0000.1/      0.7071 0.7071 
-0:0000.1/      0.7071 -0.7071 
-0:0000.1/    WIRE(Id:3)
-0:0000.1/  APPLY
-0:0000.1/    GATE H is a  (Normal) 
-0:0000.1/      0.7071 0.7071 
-0:0000.1/      0.7071 -0.7071 
-0:0000.1/    WIRE(Id:4)
-0:0000.1/  APPLY
-0:0000.1/    GATE H is a  (Normal) 
-0:0000.1/      0.7071 0.7071 
-0:0000.1/      0.7071 -0.7071 
-0:0000.1/    WIRE(Id:5)
-0:0000.1/  APPLY
-0:0000.1/    GATE H is a  (Normal) 
-0:0000.1/      0.7071 0.7071 
-0:0000.1/      0.7071 -0.7071 
-0:0000.1/    WIRE(Id:6)
-0:0000.1/  APPLY
-0:0000.1/    GATE H is a  (Normal) 
-0:0000.1/      0.7071 0.7071 
-0:0000.1/      0.7071 -0.7071 
-0:0000.1/    WIRE(Id:7)
-0:0000.1/  APPLY
-0:0000.1/    GATE H is a  (Normal) 
-0:0000.1/      0.7071 0.7071 
-0:0000.1/      0.7071 -0.7071 
-0:0000.1/    WIRE(Id:8)
-0:0000.1/  APPLY
-0:0000.1/    GATE H is a  (Normal) 
-0:0000.1/      0.7071 0.7071 
-0:0000.1/      0.7071 -0.7071 
-0:0000.1/    WIRE(Id:9)
-0:0000.1/  APPLY
-0:0000.1/    GATE H is a  (Normal) 
-0:0000.1/      0.7071 0.7071 
-0:0000.1/      0.7071 -0.7071 
-0:0000.1/    WIRE(Id:10)
-0:0000.1/  APPLY
-0:0000.1/    GATE H is a  (Normal) 
-0:0000.1/      0.7071 0.7071 
-0:0000.1/      0.7071 -0.7071 
-0:0000.1/    WIRE(Id:11)
-0:0000.1/  APPLY
-0:0000.1/    GATE H is a  (Normal) 
-0:0000.1/      0.7071 0.7071 
-0:0000.1/      0.7071 -0.7071 
-0:0000.1/    WIRE(Id:12)
-0:0000.1/  APPLY
-0:0000.1/    GATE H is a  (Normal) 
-0:0000.1/      0.7071 0.7071 
-0:0000.1/      0.7071 -0.7071 
-0:0000.1/    WIRE(Id:13)
-0:0000.1/  APPLY
-0:0000.1/    GATE H is a  (Normal) 
-0:0000.1/      0.7071 0.7071 
-0:0000.1/      0.7071 -0.7071 
-0:0000.1/    WIRE(Id:14)
-0:0000.1/  APPLY
-0:0000.1/    GATE H is a  (Normal) 
-0:0000.1/      0.7071 0.7071 
-0:0000.1/      0.7071 -0.7071 
-0:0000.1/    WIRE(Id:15)
-0:0000.1/  APPLY
-0:0000.1/    GATE H is a  (Normal) 
-0:0000.1/      0.7071 0.7071 
-0:0000.1/      0.7071 -0.7071 
-0:0000.1/    WIRE(Id:16)
-0:0000.1/  APPLY
-0:0000.1/    GATE CZ is a Controlled Z (Normal) 
-0:0000.1/      1 0 0 0 
-0:0000.1/      0 1 0 0 
-0:0000.1/      0 0 1 0 
-0:0000.1/      0 0 0 -1 
-0:0000.1/    WIRE(Id:1)
-0:0000.1/    WIRE(Id:11)
-0:0000.1/  APPLY
-0:0000.1/    GATE CZ is a Controlled Z (Normal) 
-0:0000.1/      1 0 0 0 
-0:0000.1/      0 1 0 0 
-0:0000.1/      0 0 1 0 
-0:0000.1/      0 0 0 -1 
-0:0000.1/    WIRE(Id:5)
-0:0000.1/    WIRE(Id:14)
-0:0000.1/  APPLY
-0:0000.1/    GATE CZ is a Controlled Z (Normal) 
-0:0000.1/      1 0 0 0 
-0:0000.1/      0 1 0 0 
-0:0000.1/      0 0 1 0 
-0:0000.1/      0 0 0 -1 
-0:0000.1/    WIRE(Id:7)
-0:0000.1/    WIRE(Id:16)
-0:0000.1/  APPLY
-0:0000.1/    GATE CZ is a Controlled Z (Normal) 
-0:0000.1/      1 0 0 0 
-0:0000.1/      0 1 0 0 
-0:0000.1/      0 0 1 0 
-0:0000.1/      0 0 0 -1 
-0:0000.1/    WIRE(Id:0)
-0:0000.1/    WIRE(Id:11)
-0:0000.1/  APPLY
-0:0000.1/    GATE CZ is a Controlled Z (Normal) 
-0:0000.1/      1 0 0 0 
-0:0000.1/      0 1 0 0 
-0:0000.1/      0 0 1 0 
-0:0000.1/      0 0 0 -1 
-0:0000.1/    WIRE(Id:4)
-0:0000.1/    WIRE(Id:14)
-0:0000.1/  APPLY
-0:0000.1/    GATE CZ is a Controlled Z (Normal) 
-0:0000.1/      1 0 0 0 
-0:0000.1/      0 1 0 0 
-0:0000.1/      0 0 1 0 
-0:0000.1/      0 0 0 -1 
-0:0000.1/    WIRE(Id:6)
-0:0000.1/    WIRE(Id:16)
-0:0000.1/  APPLY
-0:0000.1/    GATE CZ is a Controlled Z (Normal) 
-0:0000.1/      1 0 0 0 
-0:0000.1/      0 1 0 0 
-0:0000.1/      0 0 1 0 
-0:0000.1/      0 0 0 -1 
-0:0000.1/    WIRE(Id:4)
-0:0000.1/    WIRE(Id:11)
-0:0000.1/  APPLY
-0:0000.1/    GATE CZ is a Controlled Z (Normal) 
-0:0000.1/      1 0 0 0 
-0:0000.1/      0 1 0 0 
-0:0000.1/      0 0 1 0 
-0:0000.1/      0 0 0 -1 
-0:0000.1/    WIRE(Id:8)
-0:0000.1/    WIRE(Id:14)
-0:0000.1/  APPLY
-0:0000.1/    GATE CZ is a Controlled Z (Normal) 
-0:0000.1/      1 0 0 0 
-0:0000.1/      0 1 0 0 
-0:0000.1/      0 0 1 0 
-0:0000.1/      0 0 0 -1 
-0:0000.1/    WIRE(Id:2)
-0:0000.1/    WIRE(Id:9)
-0:0000.1/  APPLY
-0:0000.1/    GATE CZ is a Controlled Z (Normal) 
-0:0000.1/      1 0 0 0 
-0:0000.1/      0 1 0 0 
-0:0000.1/      0 0 1 0 
-0:0000.1/      0 0 0 -1 
-0:0000.1/    WIRE(Id:3)
-0:0000.1/    WIRE(Id:11)
-0:0000.1/  APPLY
-0:0000.1/    GATE CZ is a Controlled Z (Normal) 
-0:0000.1/      1 0 0 0 
-0:0000.1/      0 1 0 0 
-0:0000.1/      0 0 1 0 
-0:0000.1/      0 0 0 -1 
-0:0000.1/    WIRE(Id:7)
-0:0000.1/    WIRE(Id:14)
-0:0000.1/  APPLY
-0:0000.1/    GATE CZ is a Controlled Z (Normal) 
-0:0000.1/      1 0 0 0 
-0:0000.1/      0 1 0 0 
-0:0000.1/      0 0 1 0 
-0:0000.1/      0 0 0 -1 
-0:0000.1/    WIRE(Id:1)
-0:0000.1/    WIRE(Id:9)
-0:0000.1/  APPLY
-0:0000.1/    GATE H is a  (Normal) 
-0:0000.1/      0.7071 0.7071 
-0:0000.1/      0.7071 -0.7071 
-0:0000.1/    WIRE(Id:9)
-0:0000.1/  APPLY
-0:0000.1/    GATE H is a  (Normal) 
-0:0000.1/      0.7071 0.7071 
-0:0000.1/      0.7071 -0.7071 
-0:0000.1/    WIRE(Id:0)
-0:0000.1/  APPLY
-0:0000.1/    GATE H is a  (Normal) 
-0:0000.1/      0.7071 0.7071 
-0:0000.1/      0.7071 -0.7071 
-0:0000.1/    WIRE(Id:1)
-0:0000.1/  APPLY
-0:0000.1/    GATE H is a  (Normal) 
-0:0000.1/      0.7071 0.7071 
-0:0000.1/      0.7071 -0.7071 
-0:0000.1/    WIRE(Id:2)
-0:0000.1/  APPLY
-0:0000.1/    GATE H is a  (Normal) 
-0:0000.1/      0.7071 0.7071 
-0:0000.1/      0.7071 -0.7071 
-0:0000.1/    WIRE(Id:11)
-0:0000.1/  APPLY
-0:0000.1/    GATE H is a  (Normal) 
-0:0000.1/      0.7071 0.7071 
-0:0000.1/      0.7071 -0.7071 
-0:0000.1/    WIRE(Id:3)
-0:0000.1/  APPLY
-0:0000.1/    GATE H is a  (Normal) 
-0:0000.1/      0.7071 0.7071 
-0:0000.1/      0.7071 -0.7071 
-0:0000.1/    WIRE(Id:4)
-0:0000.1/  APPLY
-0:0000.1/    GATE H is a  (Normal) 
-0:0000.1/      0.7071 0.7071 
-0:0000.1/      0.7071 -0.7071 
-0:0000.1/    WIRE(Id:5)
-0:0000.1/  APPLY
-0:0000.1/    GATE H is a  (Normal) 
-0:0000.1/      0.7071 0.7071 
-0:0000.1/      0.7071 -0.7071 
-0:0000.1/    WIRE(Id:14)
-0:0000.1/  APPLY
-0:0000.1/    GATE H is a  (Normal) 
-0:0000.1/      0.7071 0.7071 
-0:0000.1/      0.7071 -0.7071 
-0:0000.1/    WIRE(Id:6)
-0:0000.1/  APPLY
-0:0000.1/    GATE H is a  (Normal) 
-0:0000.1/      0.7071 0.7071 
-0:0000.1/      0.7071 -0.7071 
-0:0000.1/    WIRE(Id:7)
-0:0000.1/  APPLY
-0:0000.1/    GATE H is a  (Normal) 
-0:0000.1/      0.7071 0.7071 
-0:0000.1/      0.7071 -0.7071 
-0:0000.1/    WIRE(Id:8)
-0:0000.1/  APPLY
-0:0000.1/    GATE H is a  (Normal) 
-0:0000.1/      0.7071 0.7071 
-0:0000.1/      0.7071 -0.7071 
-0:0000.1/    WIRE(Id:16)
-0:0000.1/  APPLY
-0:0000.1/    GATE CZ is a Controlled Z (Normal) 
-0:0000.1/      1 0 0 0 
-0:0000.1/      0 1 0 0 
-0:0000.1/      0 0 1 0 
-0:0000.1/      0 0 0 -1 
-0:0000.1/    WIRE(Id:0)
-0:0000.1/    WIRE(Id:10)
-0:0000.1/  APPLY
-0:0000.1/    GATE CZ is a Controlled Z (Normal) 
-0:0000.1/      1 0 0 0 
-0:0000.1/      0 1 0 0 
-0:0000.1/      0 0 1 0 
-0:0000.1/      0 0 0 -1 
-0:0000.1/    WIRE(Id:2)
-0:0000.1/    WIRE(Id:12)
-0:0000.1/  APPLY
-0:0000.1/    GATE CZ is a Controlled Z (Normal) 
-0:0000.1/      1 0 0 0 
-0:0000.1/      0 1 0 0 
-0:0000.1/      0 0 1 0 
-0:0000.1/      0 0 0 -1 
-0:0000.1/    WIRE(Id:4)
-0:0000.1/    WIRE(Id:13)
-0:0000.1/  APPLY
-0:0000.1/    GATE CZ is a Controlled Z (Normal) 
-0:0000.1/      1 0 0 0 
-0:0000.1/      0 1 0 0 
-0:0000.1/      0 0 1 0 
-0:0000.1/      0 0 0 -1 
-0:0000.1/    WIRE(Id:3)
-0:0000.1/    WIRE(Id:10)
-0:0000.1/  APPLY
-0:0000.1/    GATE CZ is a Controlled Z (Normal) 
-0:0000.1/      1 0 0 0 
-0:0000.1/      0 1 0 0 
-0:0000.1/      0 0 1 0 
-0:0000.1/      0 0 0 -1 
-0:0000.1/    WIRE(Id:5)
-0:0000.1/    WIRE(Id:12)
-0:0000.1/  APPLY
-0:0000.1/    GATE CZ is a Controlled Z (Normal) 
-0:0000.1/      1 0 0 0 
-0:0000.1/      0 1 0 0 
-0:0000.1/      0 0 1 0 
-0:0000.1/      0 0 0 -1 
-0:0000.1/    WIRE(Id:7)
-0:0000.1/    WIRE(Id:13)
-0:0000.1/  APPLY
-0:0000.1/    GATE CZ is a Controlled Z (Normal) 
-0:0000.1/      1 0 0 0 
-0:0000.1/      0 1 0 0 
-0:0000.1/      0 0 1 0 
-0:0000.1/      0 0 0 -1 
-0:0000.1/    WIRE(Id:15)
-0:0000.1/    WIRE(Id:5)
-0:0000.1/  APPLY
-0:0000.1/    GATE CZ is a Controlled Z (Normal) 
-0:0000.1/      1 0 0 0 
-0:0000.1/      0 1 0 0 
-0:0000.1/      0 0 1 0 
-0:0000.1/      0 0 0 -1 
-0:0000.1/    WIRE(Id:13)
-0:0000.1/    WIRE(Id:3)
-0:0000.1/  APPLY
-0:0000.1/    GATE CZ is a Controlled Z (Normal) 
-0:0000.1/      1 0 0 0 
-0:0000.1/      0 1 0 0 
-0:0000.1/      0 0 1 0 
-0:0000.1/      0 0 0 -1 
-0:0000.1/    WIRE(Id:12)
-0:0000.1/    WIRE(Id:1)
-0:0000.1/  APPLY
-0:0000.1/    GATE CZ is a Controlled Z (Normal) 
-0:0000.1/      1 0 0 0 
-0:0000.1/      0 1 0 0 
-0:0000.1/      0 0 1 0 
-0:0000.1/      0 0 0 -1 
-0:0000.1/    WIRE(Id:4)
-0:0000.1/    WIRE(Id:12)
-0:0000.1/  APPLY
-0:0000.1/    GATE CZ is a Controlled Z (Normal) 
-0:0000.1/      1 0 0 0 
-0:0000.1/      0 1 0 0 
-0:0000.1/      0 0 1 0 
-0:0000.1/      0 0 0 -1 
-0:0000.1/    WIRE(Id:6)
-0:0000.1/    WIRE(Id:13)
-0:0000.1/  APPLY
-0:0000.1/    GATE CZ is a Controlled Z (Normal) 
-0:0000.1/      1 0 0 0 
-0:0000.1/      0 1 0 0 
-0:0000.1/      0 0 1 0 
-0:0000.1/      0 0 0 -1 
-0:0000.1/    WIRE(Id:8)
-0:0000.1/    WIRE(Id:15)
-0:0000.1/  APPLY
-0:0000.1/    GATE H is a  (Normal) 
-0:0000.1/      0.7071 0.7071 
-0:0000.1/      0.7071 -0.7071 
-0:0000.1/    WIRE(Id:10)
-0:0000.1/  APPLY
-0:0000.1/    GATE H is a  (Normal) 
-0:0000.1/      0.7071 0.7071 
-0:0000.1/      0.7071 -0.7071 
-0:0000.1/    WIRE(Id:12)
-0:0000.1/  APPLY
-0:0000.1/    GATE H is a  (Normal) 
-0:0000.1/      0.7071 0.7071 
-0:0000.1/      0.7071 -0.7071 
-0:0000.1/    WIRE(Id:13)
-0:0000.1/  APPLY
-0:0000.1/    GATE H is a  (Normal) 
-0:0000.1/      0.7071 0.7071 
-0:0000.1/      0.7071 -0.7071 
-0:0000.1/    WIRE(Id:15)
-0:0000.1/  APPLY
-0:0000.1/    GATE Meas is a Collapse State (Measure(,Joint=)) 
-0:0000.1/      1 0 
-0:0000.1/      0 1 
-0:0000.1/    WIRE(Id:9)
-0:0000.1/  APPLY
-0:0000.1/    GATE Meas is a Collapse State (Measure(,Joint=)) 
-0:0000.1/      1 0 
-0:0000.1/      0 1 
-0:0000.1/    WIRE(Id:11)
-0:0000.1/  APPLY
-0:0000.1/    GATE Meas is a Collapse State (Measure(,Joint=)) 
-0:0000.1/      1 0 
-0:0000.1/      0 1 
-0:0000.1/    WIRE(Id:14)
-0:0000.1/  APPLY
-0:0000.1/    GATE Meas is a Collapse State (Measure(,Joint=)) 
-0:0000.1/      1 0 
-0:0000.1/      0 1 
-0:0000.1/    WIRE(Id:16)
-0:0000.1/  APPLY
-0:0000.1/    GATE Meas is a Collapse State (Measure(,Joint=)) 
-0:0000.1/      1 0 
-0:0000.1/      0 1 
-0:0000.1/    WIRE(Id:10)
-0:0000.1/  APPLY
-0:0000.1/    GATE Meas is a Collapse State (Measure(,Joint=)) 
-0:0000.1/      1 0 
-0:0000.1/      0 1 
-0:0000.1/    WIRE(Id:12)
-0:0000.1/  APPLY
-0:0000.1/    GATE Meas is a Collapse State (Measure(,Joint=)) 
-0:0000.1/      1 0 
-0:0000.1/      0 1 
-0:0000.1/    WIRE(Id:13)
-0:0000.1/  APPLY
-0:0000.1/    GATE Meas is a Collapse State (Measure(,Joint=)) 
-0:0000.1/      1 0 
-0:0000.1/      0 1 
-0:0000.1/    WIRE(Id:15)
-0:0000.1/Writing: Test.htm (split=50.00% scale=70.00%)
-0:0000.1/Writing: Test.tex (split=50.00% scale=70.00%)
-0:0000.1/     Doing columns:  0 - 35
-0:0000.1/     Doing columns: 35 - 68
-0:0000.2/========== Noise models =========
-0:0000.2/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
-0:0000.2/   ------------   --- ------- ------- ------- ------- ------- -------
-0:0000.2/              I   1.0       0       0       0       0       0       0
-0:0000.2/        AmpDamp   1.0       0       0       0       0       0       0
-0:0000.2/
-0:0000.2/========== Detailed statistics =========
-0:0000.2/      Time    Gate Pattern     Dur Wires        Type Detail
-0:0000.2/      ----    ------------     --- -----        ---- ------
-0:0000.2/
-0:0000.2/ At round 0, Syndrome measurements: 0 0 1 0 0 0 0 0
-0:0000.3/========== Noise models =========
-0:0000.3/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
-0:0000.3/   ------------   --- ------- ------- ------- ------- ------- -------
-0:0000.3/              I   1.0       9       0       0       0       0       0
-0:0000.3/        AmpDamp   1.0       0       0       0       0       0       0
-0:0000.3/
-0:0000.3/========== Detailed statistics =========
-0:0000.3/      Time    Gate Pattern     Dur Wires        Type Detail
-0:0000.3/      ----    ------------     --- -----        ---- ------
-0:0000.3/      0.00               I     1.0 0            norm !
-0:0000.3/      0.00               I     1.0 8            norm !
-0:0000.3/      0.00               I     1.0 7            norm !
-0:0000.3/      0.00               I     1.0 6            norm !
-0:0000.3/      0.00               I     1.0 5            norm !
-0:0000.3/      0.00               I     1.0 4            norm !
-0:0000.3/      0.00               I     1.0 3            norm !
-0:0000.3/      0.00               I     1.0 2            norm !
-0:0000.3/      0.00               I     1.0 1            norm !
-0:0000.3/
-0:0000.3/ At round 1, Syndrome measurements: 0 0 1 0 0 0 0 0
-0:0000.3/========== Noise models =========
-0:0000.3/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
-0:0000.3/   ------------   --- ------- ------- ------- ------- ------- -------
-0:0000.3/              I   1.0       9       0       0       0       0       0
-0:0000.3/        AmpDamp   1.0       0       0       0       0       0       0
-0:0000.3/
-0:0000.3/========== Detailed statistics =========
-0:0000.3/      Time    Gate Pattern     Dur Wires        Type Detail
-0:0000.3/      ----    ------------     --- -----        ---- ------
-0:0000.3/      0.00               I     1.0 0            norm !
-0:0000.3/      0.00               I     1.0 8            norm !
-0:0000.3/      0.00               I     1.0 7            norm !
-0:0000.3/      0.00               I     1.0 6            norm !
-0:0000.3/      0.00               I     1.0 5            norm !
-0:0000.3/      0.00               I     1.0 4            norm !
-0:0000.3/      0.00               I     1.0 3            norm !
-0:0000.3/      0.00               I     1.0 2            norm !
-0:0000.3/      0.00               I     1.0 1            norm !
-0:0000.3/
-0:0000.3/ At round 2, Syndrome measurements: 0 0 1 0 0 0 0 0
-0:0000.3/========== Noise models =========
-0:0000.3/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
-0:0000.3/   ------------   --- ------- ------- ------- ------- ------- -------
-0:0000.3/              I   1.0       9       1       1       0       0       0
-0:0000.3/        AmpDamp   1.0       0       0       0       0       0       0
-0:0000.3/
-0:0000.3/========== Detailed statistics =========
-0:0000.3/      Time    Gate Pattern     Dur Wires        Type Detail
-0:0000.3/      ----    ------------     --- -----        ---- ------
-0:0000.3/      0.00               I     1.0 0            norm !
-0:0000.3/      0.00               I     1.0 8            norm depol_Z
-0:0000.3/      0.00               I     1.0 7            norm !
-0:0000.3/      0.00               I     1.0 6            norm !
-0:0000.3/      0.00               I     1.0 5            norm !
-0:0000.3/      0.00               I     1.0 4            norm !
-0:0000.3/      0.00               I     1.0 3            norm !
-0:0000.3/      0.00               I     1.0 2            norm !
-0:0000.3/      0.00               I     1.0 1            norm !
-0:0000.3/
-0:0000.3/ At round 3, Syndrome measurements: 0 0 1 0 0 1 0 0
-0:0000.3/Z error on data qubits 5 or 8 occurred. Applying fix.
+0:0000.2/  Initial state of data qubit 4 = 
+0:0000.2/  C_0 = 0.454  ,    C_4096 = 0.891  ,  
+0:0000.3/SEQ
+0:0000.3/  APPLY
+0:0000.3/    GATE H is a  (Normal) 
+0:0000.3/      0.7071 0.7071 
+0:0000.3/      0.7071 -0.7071 
+0:0000.3/    WIRE(Id:0)
+0:0000.3/  APPLY
+0:0000.3/    GATE H is a  (Normal) 
+0:0000.3/      0.7071 0.7071 
+0:0000.3/      0.7071 -0.7071 
+0:0000.3/    WIRE(Id:1)
+0:0000.3/  APPLY
+0:0000.3/    GATE H is a  (Normal) 
+0:0000.3/      0.7071 0.7071 
+0:0000.3/      0.7071 -0.7071 
+0:0000.3/    WIRE(Id:2)
+0:0000.3/  APPLY
+0:0000.3/    GATE H is a  (Normal) 
+0:0000.3/      0.7071 0.7071 
+0:0000.3/      0.7071 -0.7071 
+0:0000.3/    WIRE(Id:3)
+0:0000.3/  APPLY
+0:0000.3/    GATE H is a  (Normal) 
+0:0000.3/      0.7071 0.7071 
+0:0000.3/      0.7071 -0.7071 
+0:0000.3/    WIRE(Id:4)
+0:0000.3/  APPLY
+0:0000.3/    GATE H is a  (Normal) 
+0:0000.3/      0.7071 0.7071 
+0:0000.3/      0.7071 -0.7071 
+0:0000.3/    WIRE(Id:5)
+0:0000.3/  APPLY
+0:0000.3/    GATE H is a  (Normal) 
+0:0000.3/      0.7071 0.7071 
+0:0000.3/      0.7071 -0.7071 
+0:0000.3/    WIRE(Id:6)
+0:0000.3/  APPLY
+0:0000.3/    GATE H is a  (Normal) 
+0:0000.3/      0.7071 0.7071 
+0:0000.3/      0.7071 -0.7071 
+0:0000.3/    WIRE(Id:7)
+0:0000.3/  APPLY
+0:0000.3/    GATE H is a  (Normal) 
+0:0000.3/      0.7071 0.7071 
+0:0000.3/      0.7071 -0.7071 
+0:0000.3/    WIRE(Id:8)
+0:0000.3/  APPLY
+0:0000.3/    GATE H is a  (Normal) 
+0:0000.3/      0.7071 0.7071 
+0:0000.3/      0.7071 -0.7071 
+0:0000.3/    WIRE(Id:9)
+0:0000.3/  APPLY
+0:0000.3/    GATE H is a  (Normal) 
+0:0000.3/      0.7071 0.7071 
+0:0000.3/      0.7071 -0.7071 
+0:0000.3/    WIRE(Id:10)
+0:0000.3/  APPLY
+0:0000.3/    GATE H is a  (Normal) 
+0:0000.3/      0.7071 0.7071 
+0:0000.3/      0.7071 -0.7071 
+0:0000.3/    WIRE(Id:11)
+0:0000.3/  APPLY
+0:0000.3/    GATE H is a  (Normal) 
+0:0000.3/      0.7071 0.7071 
+0:0000.3/      0.7071 -0.7071 
+0:0000.3/    WIRE(Id:12)
+0:0000.3/  APPLY
+0:0000.3/    GATE H is a  (Normal) 
+0:0000.3/      0.7071 0.7071 
+0:0000.3/      0.7071 -0.7071 
+0:0000.3/    WIRE(Id:13)
+0:0000.3/  APPLY
+0:0000.3/    GATE H is a  (Normal) 
+0:0000.3/      0.7071 0.7071 
+0:0000.3/      0.7071 -0.7071 
+0:0000.3/    WIRE(Id:14)
+0:0000.3/  APPLY
+0:0000.3/    GATE H is a  (Normal) 
+0:0000.3/      0.7071 0.7071 
+0:0000.3/      0.7071 -0.7071 
+0:0000.3/    WIRE(Id:15)
+0:0000.3/  APPLY
+0:0000.3/    GATE H is a  (Normal) 
+0:0000.3/      0.7071 0.7071 
+0:0000.3/      0.7071 -0.7071 
+0:0000.3/    WIRE(Id:16)
+0:0000.3/  APPLY
+0:0000.3/    GATE CZ is a Controlled Z (Normal) 
+0:0000.3/      1 0 0 0 
+0:0000.3/      0 1 0 0 
+0:0000.3/      0 0 1 0 
+0:0000.3/      0 0 0 -1 
+0:0000.3/    WIRE(Id:1)
+0:0000.3/    WIRE(Id:11)
+0:0000.3/  APPLY
+0:0000.3/    GATE CZ is a Controlled Z (Normal) 
+0:0000.3/      1 0 0 0 
+0:0000.3/      0 1 0 0 
+0:0000.3/      0 0 1 0 
+0:0000.3/      0 0 0 -1 
+0:0000.3/    WIRE(Id:5)
+0:0000.3/    WIRE(Id:14)
+0:0000.3/  APPLY
+0:0000.3/    GATE CZ is a Controlled Z (Normal) 
+0:0000.3/      1 0 0 0 
+0:0000.3/      0 1 0 0 
+0:0000.3/      0 0 1 0 
+0:0000.3/      0 0 0 -1 
+0:0000.3/    WIRE(Id:7)
+0:0000.3/    WIRE(Id:16)
+0:0000.3/  APPLY
+0:0000.3/    GATE CZ is a Controlled Z (Normal) 
+0:0000.3/      1 0 0 0 
+0:0000.3/      0 1 0 0 
+0:0000.3/      0 0 1 0 
+0:0000.3/      0 0 0 -1 
+0:0000.3/    WIRE(Id:0)
+0:0000.3/    WIRE(Id:11)
+0:0000.3/  APPLY
+0:0000.3/    GATE CZ is a Controlled Z (Normal) 
+0:0000.3/      1 0 0 0 
+0:0000.3/      0 1 0 0 
+0:0000.3/      0 0 1 0 
+0:0000.3/      0 0 0 -1 
+0:0000.3/    WIRE(Id:4)
+0:0000.3/    WIRE(Id:14)
+0:0000.3/  APPLY
+0:0000.3/    GATE CZ is a Controlled Z (Normal) 
+0:0000.3/      1 0 0 0 
+0:0000.3/      0 1 0 0 
+0:0000.3/      0 0 1 0 
+0:0000.3/      0 0 0 -1 
+0:0000.3/    WIRE(Id:6)
+0:0000.3/    WIRE(Id:16)
+0:0000.3/  APPLY
+0:0000.3/    GATE CZ is a Controlled Z (Normal) 
+0:0000.3/      1 0 0 0 
+0:0000.3/      0 1 0 0 
+0:0000.3/      0 0 1 0 
+0:0000.3/      0 0 0 -1 
+0:0000.3/    WIRE(Id:4)
+0:0000.3/    WIRE(Id:11)
+0:0000.3/  APPLY
+0:0000.3/    GATE CZ is a Controlled Z (Normal) 
+0:0000.3/      1 0 0 0 
+0:0000.3/      0 1 0 0 
+0:0000.3/      0 0 1 0 
+0:0000.3/      0 0 0 -1 
+0:0000.3/    WIRE(Id:8)
+0:0000.3/    WIRE(Id:14)
+0:0000.3/  APPLY
+0:0000.3/    GATE CZ is a Controlled Z (Normal) 
+0:0000.3/      1 0 0 0 
+0:0000.3/      0 1 0 0 
+0:0000.3/      0 0 1 0 
+0:0000.3/      0 0 0 -1 
+0:0000.3/    WIRE(Id:2)
+0:0000.3/    WIRE(Id:9)
+0:0000.3/  APPLY
+0:0000.3/    GATE CZ is a Controlled Z (Normal) 
+0:0000.3/      1 0 0 0 
+0:0000.3/      0 1 0 0 
+0:0000.3/      0 0 1 0 
+0:0000.3/      0 0 0 -1 
+0:0000.3/    WIRE(Id:3)
+0:0000.3/    WIRE(Id:11)
+0:0000.3/  APPLY
+0:0000.3/    GATE CZ is a Controlled Z (Normal) 
+0:0000.3/      1 0 0 0 
+0:0000.3/      0 1 0 0 
+0:0000.3/      0 0 1 0 
+0:0000.3/      0 0 0 -1 
+0:0000.3/    WIRE(Id:7)
+0:0000.3/    WIRE(Id:14)
+0:0000.3/  APPLY
+0:0000.3/    GATE CZ is a Controlled Z (Normal) 
+0:0000.3/      1 0 0 0 
+0:0000.3/      0 1 0 0 
+0:0000.3/      0 0 1 0 
+0:0000.3/      0 0 0 -1 
+0:0000.3/    WIRE(Id:1)
+0:0000.3/    WIRE(Id:9)
+0:0000.3/  APPLY
+0:0000.3/    GATE H is a  (Normal) 
+0:0000.3/      0.7071 0.7071 
+0:0000.3/      0.7071 -0.7071 
+0:0000.3/    WIRE(Id:9)
+0:0000.3/  APPLY
+0:0000.3/    GATE H is a  (Normal) 
+0:0000.3/      0.7071 0.7071 
+0:0000.3/      0.7071 -0.7071 
+0:0000.3/    WIRE(Id:0)
+0:0000.3/  APPLY
+0:0000.3/    GATE H is a  (Normal) 
+0:0000.3/      0.7071 0.7071 
+0:0000.3/      0.7071 -0.7071 
+0:0000.3/    WIRE(Id:1)
+0:0000.3/  APPLY
+0:0000.3/    GATE H is a  (Normal) 
+0:0000.3/      0.7071 0.7071 
+0:0000.3/      0.7071 -0.7071 
+0:0000.3/    WIRE(Id:2)
+0:0000.3/  APPLY
+0:0000.3/    GATE H is a  (Normal) 
+0:0000.3/      0.7071 0.7071 
+0:0000.3/      0.7071 -0.7071 
+0:0000.3/    WIRE(Id:11)
+0:0000.3/  APPLY
+0:0000.3/    GATE H is a  (Normal) 
+0:0000.3/      0.7071 0.7071 
+0:0000.3/      0.7071 -0.7071 
+0:0000.3/    WIRE(Id:3)
+0:0000.3/  APPLY
+0:0000.3/    GATE H is a  (Normal) 
+0:0000.3/      0.7071 0.7071 
+0:0000.3/      0.7071 -0.7071 
+0:0000.3/    WIRE(Id:4)
+0:0000.3/  APPLY
+0:0000.3/    GATE H is a  (Normal) 
+0:0000.3/      0.7071 0.7071 
+0:0000.3/      0.7071 -0.7071 
+0:0000.3/    WIRE(Id:5)
+0:0000.3/  APPLY
+0:0000.3/    GATE H is a  (Normal) 
+0:0000.3/      0.7071 0.7071 
+0:0000.3/      0.7071 -0.7071 
+0:0000.3/    WIRE(Id:14)
+0:0000.3/  APPLY
+0:0000.3/    GATE H is a  (Normal) 
+0:0000.3/      0.7071 0.7071 
+0:0000.3/      0.7071 -0.7071 
+0:0000.3/    WIRE(Id:6)
+0:0000.3/  APPLY
+0:0000.3/    GATE H is a  (Normal) 
+0:0000.3/      0.7071 0.7071 
+0:0000.3/      0.7071 -0.7071 
+0:0000.3/    WIRE(Id:7)
+0:0000.3/  APPLY
+0:0000.3/    GATE H is a  (Normal) 
+0:0000.3/      0.7071 0.7071 
+0:0000.3/      0.7071 -0.7071 
+0:0000.3/    WIRE(Id:8)
+0:0000.3/  APPLY
+0:0000.3/    GATE H is a  (Normal) 
+0:0000.3/      0.7071 0.7071 
+0:0000.3/      0.7071 -0.7071 
+0:0000.3/    WIRE(Id:16)
+0:0000.3/  APPLY
+0:0000.3/    GATE CZ is a Controlled Z (Normal) 
+0:0000.3/      1 0 0 0 
+0:0000.3/      0 1 0 0 
+0:0000.3/      0 0 1 0 
+0:0000.3/      0 0 0 -1 
+0:0000.3/    WIRE(Id:0)
+0:0000.3/    WIRE(Id:10)
+0:0000.3/  APPLY
+0:0000.3/    GATE CZ is a Controlled Z (Normal) 
+0:0000.3/      1 0 0 0 
+0:0000.3/      0 1 0 0 
+0:0000.3/      0 0 1 0 
+0:0000.3/      0 0 0 -1 
+0:0000.3/    WIRE(Id:2)
+0:0000.3/    WIRE(Id:12)
+0:0000.3/  APPLY
+0:0000.3/    GATE CZ is a Controlled Z (Normal) 
+0:0000.3/      1 0 0 0 
+0:0000.3/      0 1 0 0 
+0:0000.3/      0 0 1 0 
+0:0000.3/      0 0 0 -1 
+0:0000.3/    WIRE(Id:4)
+0:0000.3/    WIRE(Id:13)
+0:0000.3/  APPLY
+0:0000.3/    GATE CZ is a Controlled Z (Normal) 
+0:0000.3/      1 0 0 0 
+0:0000.3/      0 1 0 0 
+0:0000.3/      0 0 1 0 
+0:0000.3/      0 0 0 -1 
+0:0000.3/    WIRE(Id:3)
+0:0000.3/    WIRE(Id:10)
+0:0000.3/  APPLY
+0:0000.3/    GATE CZ is a Controlled Z (Normal) 
+0:0000.3/      1 0 0 0 
+0:0000.3/      0 1 0 0 
+0:0000.3/      0 0 1 0 
+0:0000.3/      0 0 0 -1 
+0:0000.3/    WIRE(Id:5)
+0:0000.3/    WIRE(Id:12)
+0:0000.3/  APPLY
+0:0000.3/    GATE CZ is a Controlled Z (Normal) 
+0:0000.3/      1 0 0 0 
+0:0000.3/      0 1 0 0 
+0:0000.3/      0 0 1 0 
+0:0000.3/      0 0 0 -1 
+0:0000.3/    WIRE(Id:7)
+0:0000.3/    WIRE(Id:13)
+0:0000.3/  APPLY
+0:0000.3/    GATE CZ is a Controlled Z (Normal) 
+0:0000.3/      1 0 0 0 
+0:0000.3/      0 1 0 0 
+0:0000.3/      0 0 1 0 
+0:0000.3/      0 0 0 -1 
+0:0000.3/    WIRE(Id:15)
+0:0000.3/    WIRE(Id:5)
+0:0000.3/  APPLY
+0:0000.3/    GATE CZ is a Controlled Z (Normal) 
+0:0000.3/      1 0 0 0 
+0:0000.3/      0 1 0 0 
+0:0000.3/      0 0 1 0 
+0:0000.3/      0 0 0 -1 
+0:0000.3/    WIRE(Id:13)
+0:0000.3/    WIRE(Id:3)
+0:0000.3/  APPLY
+0:0000.3/    GATE CZ is a Controlled Z (Normal) 
+0:0000.3/      1 0 0 0 
+0:0000.3/      0 1 0 0 
+0:0000.3/      0 0 1 0 
+0:0000.3/      0 0 0 -1 
+0:0000.3/    WIRE(Id:12)
+0:0000.3/    WIRE(Id:1)
+0:0000.3/  APPLY
+0:0000.3/    GATE CZ is a Controlled Z (Normal) 
+0:0000.3/      1 0 0 0 
+0:0000.3/      0 1 0 0 
+0:0000.3/      0 0 1 0 
+0:0000.3/      0 0 0 -1 
+0:0000.3/    WIRE(Id:4)
+0:0000.3/    WIRE(Id:12)
+0:0000.3/  APPLY
+0:0000.3/    GATE CZ is a Controlled Z (Normal) 
+0:0000.3/      1 0 0 0 
+0:0000.3/      0 1 0 0 
+0:0000.3/      0 0 1 0 
+0:0000.3/      0 0 0 -1 
+0:0000.3/    WIRE(Id:6)
+0:0000.3/    WIRE(Id:13)
+0:0000.3/  APPLY
+0:0000.3/    GATE CZ is a Controlled Z (Normal) 
+0:0000.3/      1 0 0 0 
+0:0000.3/      0 1 0 0 
+0:0000.3/      0 0 1 0 
+0:0000.3/      0 0 0 -1 
+0:0000.3/    WIRE(Id:8)
+0:0000.3/    WIRE(Id:15)
+0:0000.3/  APPLY
+0:0000.3/    GATE H is a  (Normal) 
+0:0000.3/      0.7071 0.7071 
+0:0000.3/      0.7071 -0.7071 
+0:0000.3/    WIRE(Id:10)
+0:0000.3/  APPLY
+0:0000.3/    GATE H is a  (Normal) 
+0:0000.3/      0.7071 0.7071 
+0:0000.3/      0.7071 -0.7071 
+0:0000.3/    WIRE(Id:12)
+0:0000.3/  APPLY
+0:0000.3/    GATE H is a  (Normal) 
+0:0000.3/      0.7071 0.7071 
+0:0000.3/      0.7071 -0.7071 
+0:0000.3/    WIRE(Id:13)
+0:0000.3/  APPLY
+0:0000.3/    GATE H is a  (Normal) 
+0:0000.3/      0.7071 0.7071 
+0:0000.3/      0.7071 -0.7071 
+0:0000.3/    WIRE(Id:15)
+0:0000.3/  APPLY
+0:0000.3/    GATE Meas is a Collapse State (Measure(,Joint=)) 
+0:0000.3/      1 0 
+0:0000.3/      0 1 
+0:0000.3/    WIRE(Id:9)
+0:0000.3/  APPLY
+0:0000.3/    GATE Meas is a Collapse State (Measure(,Joint=)) 
+0:0000.3/      1 0 
+0:0000.3/      0 1 
+0:0000.3/    WIRE(Id:11)
+0:0000.3/  APPLY
+0:0000.3/    GATE Meas is a Collapse State (Measure(,Joint=)) 
+0:0000.3/      1 0 
+0:0000.3/      0 1 
+0:0000.3/    WIRE(Id:14)
+0:0000.3/  APPLY
+0:0000.3/    GATE Meas is a Collapse State (Measure(,Joint=)) 
+0:0000.3/      1 0 
+0:0000.3/      0 1 
+0:0000.3/    WIRE(Id:16)
+0:0000.3/  APPLY
+0:0000.3/    GATE Meas is a Collapse State (Measure(,Joint=)) 
+0:0000.3/      1 0 
+0:0000.3/      0 1 
+0:0000.3/    WIRE(Id:10)
+0:0000.3/  APPLY
+0:0000.3/    GATE Meas is a Collapse State (Measure(,Joint=)) 
+0:0000.3/      1 0 
+0:0000.3/      0 1 
+0:0000.3/    WIRE(Id:12)
+0:0000.3/  APPLY
+0:0000.3/    GATE Meas is a Collapse State (Measure(,Joint=)) 
+0:0000.3/      1 0 
+0:0000.3/      0 1 
+0:0000.3/    WIRE(Id:13)
+0:0000.3/  APPLY
+0:0000.3/    GATE Meas is a Collapse State (Measure(,Joint=)) 
+0:0000.3/      1 0 
+0:0000.3/      0 1 
+0:0000.3/    WIRE(Id:15)
+0:0000.3/Writing: Test.htm (split=50.00% scale=70.00%)
+0:0000.3/Writing: Test.tex (split=50.00% scale=70.00%)
+0:0000.3/     Doing columns:  0 - 35
+0:0000.3/     Doing columns: 35 - 68
 0:0000.4/========== Noise models =========
 0:0000.4/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
 0:0000.4/   ------------   --- ------- ------- ------- ------- ------- -------
-0:0000.4/              I   1.0       9       1       1       0       0       0
+0:0000.4/              I   1.0       0       0       0       0       0       0
 0:0000.4/        AmpDamp   1.0       0       0       0       0       0       0
 0:0000.4/
 0:0000.4/========== Detailed statistics =========
 0:0000.4/      Time    Gate Pattern     Dur Wires        Type Detail
 0:0000.4/      ----    ------------     --- -----        ---- ------
-0:0000.4/      0.00               I     1.0 0            norm !
-0:0000.4/      0.00               I     1.0 8            norm !
-0:0000.4/      0.00               I     1.0 7            norm depol_X
-0:0000.4/      0.00               I     1.0 6            norm !
-0:0000.4/      0.00               I     1.0 5            norm !
-0:0000.4/      0.00               I     1.0 4            norm !
-0:0000.4/      0.00               I     1.0 3            norm !
-0:0000.4/      0.00               I     1.0 2            norm !
-0:0000.4/      0.00               I     1.0 1            norm !
 0:0000.4/
-0:0000.4/ At round 4, Syndrome measurements: 0 0 1 0 1 0 0 0
-0:0000.4/X error on data qubits 6 or 7 occurred. Applying fix.
-0:0000.4/========== Noise models =========
-0:0000.4/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
-0:0000.4/   ------------   --- ------- ------- ------- ------- ------- -------
-0:0000.4/              I   1.0       9       1       1       0       0       0
-0:0000.4/        AmpDamp   1.0       0       0       0       0       0       0
-0:0000.4/
-0:0000.4/========== Detailed statistics =========
-0:0000.4/      Time    Gate Pattern     Dur Wires        Type Detail
-0:0000.4/      ----    ------------     --- -----        ---- ------
-0:0000.4/      0.00               I     1.0 0            norm !
-0:0000.4/      0.00               I     1.0 8            norm !
-0:0000.4/      0.00               I     1.0 7            norm !
-0:0000.4/      0.00               I     1.0 6            norm depol_Y
-0:0000.4/      0.00               I     1.0 5            norm !
-0:0000.4/      0.00               I     1.0 4            norm !
-0:0000.4/      0.00               I     1.0 3            norm !
-0:0000.4/      0.00               I     1.0 2            norm !
-0:0000.4/      0.00               I     1.0 1            norm !
-0:0000.4/
-0:0000.4/ At round 5, Syndrome measurements: 0 0 1 0 1 0 0 1
-0:0000.4/X error on data qubits 6 or 7 occurred. Applying fix.
-0:0000.4/Z error on data qubit 6 occurred. Applying fix.
+0:0000.4/ At round 0, Syndrome measurements: 0 0 1 0 0 1 0 1
 0:0000.5/========== Noise models =========
 0:0000.5/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
 0:0000.5/   ------------   --- ------- ------- ------- ------- ------- -------
@@ -542,7 +438,7 @@
 0:0000.5/      0.00               I     1.0 2            norm !
 0:0000.5/      0.00               I     1.0 1            norm !
 0:0000.5/
-0:0000.5/ At round 6, Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.5/ At round 1, Syndrome measurements: 0 0 1 0 0 1 0 1
 0:0000.5/========== Noise models =========
 0:0000.5/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
 0:0000.5/   ------------   --- ------- ------- ------- ------- ------- -------
@@ -562,7 +458,7 @@
 0:0000.5/      0.00               I     1.0 2            norm !
 0:0000.5/      0.00               I     1.0 1            norm !
 0:0000.5/
-0:0000.5/ At round 7, Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.5/ At round 2, Syndrome measurements: 0 0 1 0 0 1 0 1
 0:0000.5/========== Noise models =========
 0:0000.5/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
 0:0000.5/   ------------   --- ------- ------- ------- ------- ------- -------
@@ -573,21 +469,41 @@
 0:0000.5/      Time    Gate Pattern     Dur Wires        Type Detail
 0:0000.5/      ----    ------------     --- -----        ---- ------
 0:0000.5/      0.00               I     1.0 0            norm !
-0:0000.5/      0.00               I     1.0 8            norm !
+0:0000.5/      0.00               I     1.0 8            norm depol_Z
 0:0000.5/      0.00               I     1.0 7            norm !
 0:0000.5/      0.00               I     1.0 6            norm !
 0:0000.5/      0.00               I     1.0 5            norm !
-0:0000.5/      0.00               I     1.0 4            norm depol_Z
+0:0000.5/      0.00               I     1.0 4            norm !
 0:0000.5/      0.00               I     1.0 3            norm !
 0:0000.5/      0.00               I     1.0 2            norm !
 0:0000.5/      0.00               I     1.0 1            norm !
 0:0000.5/
-0:0000.5/ At round 8, Syndrome measurements: 0 0 0 0 0 1 0 0
-0:0000.5/Z error on data qubit 4 occurred. Applying fix.
+0:0000.5/ At round 3, Syndrome measurements: 0 0 1 0 0 0 0 1
+0:0000.5/Z error on data qubits 5 or 8 occurred. Applying fix.
+0:0000.5/========== Noise models =========
+0:0000.5/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.5/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.5/              I   1.0       9       0       0       0       0       0
+0:0000.5/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.5/
+0:0000.5/========== Detailed statistics =========
+0:0000.5/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.5/      ----    ------------     --- -----        ---- ------
+0:0000.5/      0.00               I     1.0 0            norm !
+0:0000.5/      0.00               I     1.0 8            norm !
+0:0000.5/      0.00               I     1.0 7            norm !
+0:0000.5/      0.00               I     1.0 6            norm !
+0:0000.5/      0.00               I     1.0 5            norm !
+0:0000.5/      0.00               I     1.0 4            norm !
+0:0000.5/      0.00               I     1.0 3            norm !
+0:0000.5/      0.00               I     1.0 2            norm !
+0:0000.5/      0.00               I     1.0 1            norm !
+0:0000.5/
+0:0000.5/ At round 4, Syndrome measurements: 0 0 1 0 0 1 0 1
 0:0000.6/========== Noise models =========
 0:0000.6/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
 0:0000.6/   ------------   --- ------- ------- ------- ------- ------- -------
-0:0000.6/              I   1.0       9       0       0       0       0       0
+0:0000.6/              I   1.0       9       1       1       0       0       0
 0:0000.6/        AmpDamp   1.0       0       0       0       0       0       0
 0:0000.6/
 0:0000.6/========== Detailed statistics =========
@@ -600,95 +516,31 @@
 0:0000.6/      0.00               I     1.0 5            norm !
 0:0000.6/      0.00               I     1.0 4            norm !
 0:0000.6/      0.00               I     1.0 3            norm !
-0:0000.6/      0.00               I     1.0 2            norm !
+0:0000.6/      0.00               I     1.0 2            norm depol_X
 0:0000.6/      0.00               I     1.0 1            norm !
 0:0000.6/
-0:0000.6/ At round 9, Syndrome measurements: 0 0 1 0 0 0 0 0
-0:0000.6/========== Noise models =========
-0:0000.6/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
-0:0000.6/   ------------   --- ------- ------- ------- ------- ------- -------
-0:0000.6/              I   1.0       9       0       0       0       0       0
-0:0000.6/        AmpDamp   1.0       1       1       1       0       0       0
-0:0000.6/
-0:0000.6/========== Detailed statistics =========
-0:0000.6/      Time    Gate Pattern     Dur Wires        Type Detail
-0:0000.6/      ----    ------------     --- -----        ---- ------
-0:0000.6/      0.00               I     1.0 0            norm !
-0:0000.6/      0.00               I     1.0 8            norm !
-0:0000.6/      0.00               I     1.0 7            norm !
-0:0000.6/      0.00               I     1.0 6            norm !
-0:0000.6/      0.00         AmpDamp     1.0 6            norm <hard>
-0:0000.6/      0.00               I     1.0 5            norm !
-0:0000.6/      0.00               I     1.0 4            norm !
-0:0000.6/      0.00               I     1.0 3            norm !
-0:0000.6/      0.00               I     1.0 2            norm !
-0:0000.6/      0.00               I     1.0 1            norm !
-0:0000.6/
-0:0000.6/ At round 10, Syndrome measurements: 0 0 1 0 1 0 0 1
-0:0000.6/X error on data qubits 6 or 7 occurred. Applying fix.
-0:0000.6/Z error on data qubit 6 occurred. Applying fix.
-0:0000.7/Apply logical H
-0:0000.8/========== Noise models =========
-0:0000.8/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
-0:0000.8/   ------------   --- ------- ------- ------- ------- ------- -------
-0:0000.8/              I   1.0       9       0       0       0       0       0
-0:0000.8/        AmpDamp   1.0       0       0       0       0       0       0
-0:0000.8/
-0:0000.8/========== Detailed statistics =========
-0:0000.8/      Time    Gate Pattern     Dur Wires        Type Detail
-0:0000.8/      ----    ------------     --- -----        ---- ------
-0:0000.8/      0.00               I     1.0 0            norm !
-0:0000.8/      0.00               I     1.0 8            norm !
-0:0000.8/      0.00               I     1.0 7            norm !
-0:0000.8/      0.00               I     1.0 6            norm !
-0:0000.8/      0.00               I     1.0 5            norm !
-0:0000.8/      0.00               I     1.0 4            norm !
-0:0000.8/      0.00               I     1.0 3            norm !
-0:0000.8/      0.00               I     1.0 2            norm !
-0:0000.8/      0.00               I     1.0 1            norm !
-0:0000.8/
-0:0000.8/ At round 11, Syndrome measurements: 0 0 1 0 0 0 0 0
-0:0000.8/========== Noise models =========
-0:0000.8/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
-0:0000.8/   ------------   --- ------- ------- ------- ------- ------- -------
-0:0000.8/              I   1.0       9       1       1       0       0       0
-0:0000.8/        AmpDamp   1.0       0       0       0       0       0       0
-0:0000.8/
-0:0000.8/========== Detailed statistics =========
-0:0000.8/      Time    Gate Pattern     Dur Wires        Type Detail
-0:0000.8/      ----    ------------     --- -----        ---- ------
-0:0000.8/      0.00               I     1.0 0            norm !
-0:0000.8/      0.00               I     1.0 8            norm !
-0:0000.8/      0.00               I     1.0 7            norm !
-0:0000.8/      0.00               I     1.0 6            norm !
-0:0000.8/      0.00               I     1.0 5            norm !
-0:0000.8/      0.00               I     1.0 4            norm !
-0:0000.8/      0.00               I     1.0 3            norm depol_X
-0:0000.8/      0.00               I     1.0 2            norm !
-0:0000.8/      0.00               I     1.0 1            norm !
-0:0000.8/
-0:0000.8/ At round 12, Syndrome measurements: 0 0 0 0 0 0 0 0
-0:0000.8/X error on data qubits 3 or 0 occurred. Applying fix.
-0:0000.8/========== Noise models =========
-0:0000.8/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
-0:0000.8/   ------------   --- ------- ------- ------- ------- ------- -------
-0:0000.8/              I   1.0       9       0       0       0       0       0
-0:0000.8/        AmpDamp   1.0       0       0       0       0       0       0
-0:0000.8/
-0:0000.8/========== Detailed statistics =========
-0:0000.8/      Time    Gate Pattern     Dur Wires        Type Detail
-0:0000.8/      ----    ------------     --- -----        ---- ------
-0:0000.8/      0.00               I     1.0 0            norm !
-0:0000.8/      0.00               I     1.0 8            norm !
-0:0000.8/      0.00               I     1.0 7            norm !
-0:0000.8/      0.00               I     1.0 6            norm !
-0:0000.8/      0.00               I     1.0 5            norm !
-0:0000.8/      0.00               I     1.0 4            norm !
-0:0000.8/      0.00               I     1.0 3            norm !
-0:0000.8/      0.00               I     1.0 2            norm !
-0:0000.8/      0.00               I     1.0 1            norm !
-0:0000.8/
-0:0000.8/ At round 13, Syndrome measurements: 0 0 1 0 0 0 0 0
+0:0000.6/ At round 5, Syndrome measurements: 0 0 1 1 0 1 0 1
+0:0000.6/X error on data qubits 1 or 2 occurred. Applying fix.
+0:0000.7/========== Noise models =========
+0:0000.7/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
+0:0000.7/   ------------   --- ------- ------- ------- ------- ------- -------
+0:0000.7/              I   1.0       9       0       0       0       0       0
+0:0000.7/        AmpDamp   1.0       0       0       0       0       0       0
+0:0000.7/
+0:0000.7/========== Detailed statistics =========
+0:0000.7/      Time    Gate Pattern     Dur Wires        Type Detail
+0:0000.7/      ----    ------------     --- -----        ---- ------
+0:0000.7/      0.00               I     1.0 0            norm !
+0:0000.7/      0.00               I     1.0 8            norm !
+0:0000.7/      0.00               I     1.0 7            norm !
+0:0000.7/      0.00               I     1.0 6            norm !
+0:0000.7/      0.00               I     1.0 5            norm !
+0:0000.7/      0.00               I     1.0 4            norm !
+0:0000.7/      0.00               I     1.0 3            norm !
+0:0000.7/      0.00               I     1.0 2            norm !
+0:0000.7/      0.00               I     1.0 1            norm !
+0:0000.7/
+0:0000.7/ At round 6, Syndrome measurements: 0 0 1 0 0 1 0 1
 0:0000.8/========== Noise models =========
 0:0000.8/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
 0:0000.8/   ------------   --- ------- ------- ------- ------- ------- -------
@@ -705,345 +557,8 @@
 0:0000.8/      0.00               I     1.0 5            norm !
 0:0000.8/      0.00               I     1.0 4            norm !
 0:0000.8/      0.00               I     1.0 3            norm !
-0:0000.8/      0.00               I     1.0 2            norm !
-0:0000.8/      0.00               I     1.0 1            norm depol_X
+0:0000.8/      0.00               I     1.0 2            norm depol_Z
+0:0000.8/      0.00               I     1.0 1            norm !
 0:0000.8/
-0:0000.8/ At round 14, Syndrome measurements: 1 0 0 0 0 0 0 0
-0:0000.8/X error on data qubit 1 occurred. Applying fix.
-0:0000.9/========== Noise models =========
-0:0000.9/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
-0:0000.9/   ------------   --- ------- ------- ------- ------- ------- -------
-0:0000.9/              I   1.0       9       1       1       0       0       0
-0:0000.9/        AmpDamp   1.0       0       0       0       0       0       0
-0:0000.9/
-0:0000.9/========== Detailed statistics =========
-0:0000.9/      Time    Gate Pattern     Dur Wires        Type Detail
-0:0000.9/      ----    ------------     --- -----        ---- ------
-0:0000.9/      0.00               I     1.0 0            norm !
-0:0000.9/      0.00               I     1.0 8            norm !
-0:0000.9/      0.00               I     1.0 7            norm !
-0:0000.9/      0.00               I     1.0 6            norm !
-0:0000.9/      0.00               I     1.0 5            norm !
-0:0000.9/      0.00               I     1.0 4            norm !
-0:0000.9/      0.00               I     1.0 3            norm !
-0:0000.9/      0.00               I     1.0 2            norm depol_X
-0:0000.9/      0.00               I     1.0 1            norm !
-0:0000.9/
-0:0000.9/ At round 15, Syndrome measurements: 1 0 1 0 0 0 0 0
-0:0000.9/X error on data qubit 2 occurred. Applying fix.
-0:0001.0/========== Noise models =========
-0:0001.0/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
-0:0001.0/   ------------   --- ------- ------- ------- ------- ------- -------
-0:0001.0/              I   1.0       9       0       0       0       0       0
-0:0001.0/        AmpDamp   1.0       0       0       0       0       0       0
-0:0001.0/
-0:0001.0/========== Detailed statistics =========
-0:0001.0/      Time    Gate Pattern     Dur Wires        Type Detail
-0:0001.0/      ----    ------------     --- -----        ---- ------
-0:0001.0/      0.00               I     1.0 0            norm !
-0:0001.0/      0.00               I     1.0 8            norm !
-0:0001.0/      0.00               I     1.0 7            norm !
-0:0001.0/      0.00               I     1.0 6            norm !
-0:0001.0/      0.00               I     1.0 5            norm !
-0:0001.0/      0.00               I     1.0 4            norm !
-0:0001.0/      0.00               I     1.0 3            norm !
-0:0001.0/      0.00               I     1.0 2            norm !
-0:0001.0/      0.00               I     1.0 1            norm !
-0:0001.0/
-0:0001.0/ At round 16, Syndrome measurements: 0 0 1 0 0 0 0 0
-0:0001.0/========== Noise models =========
-0:0001.0/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
-0:0001.0/   ------------   --- ------- ------- ------- ------- ------- -------
-0:0001.0/              I   1.0       9       0       0       0       0       0
-0:0001.0/        AmpDamp   1.0       0       0       0       0       0       0
-0:0001.0/
-0:0001.0/========== Detailed statistics =========
-0:0001.0/      Time    Gate Pattern     Dur Wires        Type Detail
-0:0001.0/      ----    ------------     --- -----        ---- ------
-0:0001.0/      0.00               I     1.0 0            norm !
-0:0001.0/      0.00               I     1.0 8            norm !
-0:0001.0/      0.00               I     1.0 7            norm !
-0:0001.0/      0.00               I     1.0 6            norm !
-0:0001.0/      0.00               I     1.0 5            norm !
-0:0001.0/      0.00               I     1.0 4            norm !
-0:0001.0/      0.00               I     1.0 3            norm !
-0:0001.0/      0.00               I     1.0 2            norm !
-0:0001.0/      0.00               I     1.0 1            norm !
-0:0001.0/
-0:0001.0/ At round 17, Syndrome measurements: 0 0 1 0 0 0 0 0
-0:0001.0/========== Noise models =========
-0:0001.0/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
-0:0001.0/   ------------   --- ------- ------- ------- ------- ------- -------
-0:0001.0/              I   1.0       9       1       1       0       0       0
-0:0001.0/        AmpDamp   1.0       0       0       0       0       0       0
-0:0001.0/
-0:0001.0/========== Detailed statistics =========
-0:0001.0/      Time    Gate Pattern     Dur Wires        Type Detail
-0:0001.0/      ----    ------------     --- -----        ---- ------
-0:0001.0/      0.00               I     1.0 0            norm !
-0:0001.0/      0.00               I     1.0 8            norm depol_X
-0:0001.0/      0.00               I     1.0 7            norm !
-0:0001.0/      0.00               I     1.0 6            norm !
-0:0001.0/      0.00               I     1.0 5            norm !
-0:0001.0/      0.00               I     1.0 4            norm !
-0:0001.0/      0.00               I     1.0 3            norm !
-0:0001.0/      0.00               I     1.0 2            norm !
-0:0001.0/      0.00               I     1.0 1            norm !
-0:0001.0/
-0:0001.0/ At round 18, Syndrome measurements: 0 0 1 0 0 1 0 0
-0:0001.0/X error on data qubits 5 or 8 occurred. Applying fix.
-0:0001.0/========== Noise models =========
-0:0001.0/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
-0:0001.0/   ------------   --- ------- ------- ------- ------- ------- -------
-0:0001.0/              I   1.0       9       1       1       0       0       0
-0:0001.0/        AmpDamp   1.0       0       0       0       0       0       0
-0:0001.0/
-0:0001.0/========== Detailed statistics =========
-0:0001.0/      Time    Gate Pattern     Dur Wires        Type Detail
-0:0001.0/      ----    ------------     --- -----        ---- ------
-0:0001.0/      0.00               I     1.0 0            norm depol_X
-0:0001.0/      0.00               I     1.0 8            norm !
-0:0001.0/      0.00               I     1.0 7            norm !
-0:0001.0/      0.00               I     1.0 6            norm !
-0:0001.0/      0.00               I     1.0 5            norm !
-0:0001.0/      0.00               I     1.0 4            norm !
-0:0001.0/      0.00               I     1.0 3            norm !
-0:0001.0/      0.00               I     1.0 2            norm !
-0:0001.0/      0.00               I     1.0 1            norm !
-0:0001.0/
-0:0001.0/ At round 19, Syndrome measurements: 0 0 0 0 0 0 0 0
-0:0001.0/X error on data qubits 3 or 0 occurred. Applying fix.
-0:0001.1/========== Noise models =========
-0:0001.1/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
-0:0001.1/   ------------   --- ------- ------- ------- ------- ------- -------
-0:0001.1/              I   1.0       9       1       1       0       0       0
-0:0001.1/        AmpDamp   1.0       0       0       0       0       0       0
-0:0001.1/
-0:0001.1/========== Detailed statistics =========
-0:0001.1/      Time    Gate Pattern     Dur Wires        Type Detail
-0:0001.1/      ----    ------------     --- -----        ---- ------
-0:0001.1/      0.00               I     1.0 0            norm !
-0:0001.1/      0.00               I     1.0 8            norm !
-0:0001.1/      0.00               I     1.0 7            norm !
-0:0001.1/      0.00               I     1.0 6            norm !
-0:0001.1/      0.00               I     1.0 5            norm !
-0:0001.1/      0.00               I     1.0 4            norm !
-0:0001.1/      0.00               I     1.0 3            norm !
-0:0001.1/      0.00               I     1.0 2            norm depol_Y
-0:0001.1/      0.00               I     1.0 1            norm !
-0:0001.1/
-0:0001.1/ At round 20, Syndrome measurements: 1 0 1 1 0 0 0 0
-0:0001.1/X error on data qubit 2 occurred. Applying fix.
-0:0001.1/Z error on data qubits 1 or 2 occurred. Applying fix.
-0:0001.1/========== Noise models =========
-0:0001.1/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
-0:0001.1/   ------------   --- ------- ------- ------- ------- ------- -------
-0:0001.1/              I   1.0       9       0       0       0       0       0
-0:0001.1/        AmpDamp   1.0       0       0       0       0       0       0
-0:0001.1/
-0:0001.1/========== Detailed statistics =========
-0:0001.1/      Time    Gate Pattern     Dur Wires        Type Detail
-0:0001.1/      ----    ------------     --- -----        ---- ------
-0:0001.1/      0.00               I     1.0 0            norm !
-0:0001.1/      0.00               I     1.0 8            norm !
-0:0001.1/      0.00               I     1.0 7            norm !
-0:0001.1/      0.00               I     1.0 6            norm !
-0:0001.1/      0.00               I     1.0 5            norm !
-0:0001.1/      0.00               I     1.0 4            norm !
-0:0001.1/      0.00               I     1.0 3            norm !
-0:0001.1/      0.00               I     1.0 2            norm !
-0:0001.1/      0.00               I     1.0 1            norm !
-0:0001.1/
-0:0001.1/ At round 21, Syndrome measurements: 0 0 1 0 0 0 0 0
-0:0001.2/========== Noise models =========
-0:0001.2/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
-0:0001.2/   ------------   --- ------- ------- ------- ------- ------- -------
-0:0001.2/              I   1.0       9       0       0       0       0       0
-0:0001.2/        AmpDamp   1.0       0       0       0       0       0       0
-0:0001.2/
-0:0001.2/========== Detailed statistics =========
-0:0001.2/      Time    Gate Pattern     Dur Wires        Type Detail
-0:0001.2/      ----    ------------     --- -----        ---- ------
-0:0001.2/      0.00               I     1.0 0            norm !
-0:0001.2/      0.00               I     1.0 8            norm !
-0:0001.2/      0.00               I     1.0 7            norm !
-0:0001.2/      0.00               I     1.0 6            norm !
-0:0001.2/      0.00               I     1.0 5            norm !
-0:0001.2/      0.00               I     1.0 4            norm !
-0:0001.2/      0.00               I     1.0 3            norm !
-0:0001.2/      0.00               I     1.0 2            norm !
-0:0001.2/      0.00               I     1.0 1            norm !
-0:0001.2/
-0:0001.2/ At round 22, Syndrome measurements: 0 0 1 0 0 0 0 0
-0:0001.2/========== Noise models =========
-0:0001.2/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
-0:0001.2/   ------------   --- ------- ------- ------- ------- ------- -------
-0:0001.2/              I   1.0       9       0       0       0       0       0
-0:0001.2/        AmpDamp   1.0       0       0       0       0       0       0
-0:0001.2/
-0:0001.2/========== Detailed statistics =========
-0:0001.2/      Time    Gate Pattern     Dur Wires        Type Detail
-0:0001.2/      ----    ------------     --- -----        ---- ------
-0:0001.2/      0.00               I     1.0 0            norm !
-0:0001.2/      0.00               I     1.0 8            norm !
-0:0001.2/      0.00               I     1.0 7            norm !
-0:0001.2/      0.00               I     1.0 6            norm !
-0:0001.2/      0.00               I     1.0 5            norm !
-0:0001.2/      0.00               I     1.0 4            norm !
-0:0001.2/      0.00               I     1.0 3            norm !
-0:0001.2/      0.00               I     1.0 2            norm !
-0:0001.2/      0.00               I     1.0 1            norm !
-0:0001.2/
-0:0001.2/ At round 23, Syndrome measurements: 0 0 1 0 0 0 0 0
-0:0001.2/========== Noise models =========
-0:0001.2/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
-0:0001.2/   ------------   --- ------- ------- ------- ------- ------- -------
-0:0001.2/              I   1.0       9       0       0       0       0       0
-0:0001.2/        AmpDamp   1.0       0       0       0       0       0       0
-0:0001.2/
-0:0001.2/========== Detailed statistics =========
-0:0001.2/      Time    Gate Pattern     Dur Wires        Type Detail
-0:0001.2/      ----    ------------     --- -----        ---- ------
-0:0001.2/      0.00               I     1.0 0            norm !
-0:0001.2/      0.00               I     1.0 8            norm !
-0:0001.2/      0.00               I     1.0 7            norm !
-0:0001.2/      0.00               I     1.0 6            norm !
-0:0001.2/      0.00               I     1.0 5            norm !
-0:0001.2/      0.00               I     1.0 4            norm !
-0:0001.2/      0.00               I     1.0 3            norm !
-0:0001.2/      0.00               I     1.0 2            norm !
-0:0001.2/      0.00               I     1.0 1            norm !
-0:0001.2/
-0:0001.2/ At round 24, Syndrome measurements: 0 0 1 0 0 0 0 0
-0:0001.2/========== Noise models =========
-0:0001.2/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
-0:0001.2/   ------------   --- ------- ------- ------- ------- ------- -------
-0:0001.2/              I   1.0       9       1       1       0       0       0
-0:0001.2/        AmpDamp   1.0       0       0       0       0       0       0
-0:0001.2/
-0:0001.2/========== Detailed statistics =========
-0:0001.2/      Time    Gate Pattern     Dur Wires        Type Detail
-0:0001.2/      ----    ------------     --- -----        ---- ------
-0:0001.2/      0.00               I     1.0 0            norm !
-0:0001.2/      0.00               I     1.0 8            norm !
-0:0001.2/      0.00               I     1.0 7            norm !
-0:0001.2/      0.00               I     1.0 6            norm !
-0:0001.2/      0.00               I     1.0 5            norm !
-0:0001.2/      0.00               I     1.0 4            norm !
-0:0001.2/      0.00               I     1.0 3            norm !
-0:0001.2/      0.00               I     1.0 2            norm !
-0:0001.2/      0.00               I     1.0 1            norm depol_X
-0:0001.2/
-0:0001.2/ At round 25, Syndrome measurements: 1 0 0 0 0 0 0 0
-0:0001.2/X error on data qubit 1 occurred. Applying fix.
-0:0001.2/========== Noise models =========
-0:0001.2/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
-0:0001.2/   ------------   --- ------- ------- ------- ------- ------- -------
-0:0001.2/              I   1.0       9       0       0       0       0       0
-0:0001.2/        AmpDamp   1.0       0       0       0       0       0       0
-0:0001.2/
-0:0001.2/========== Detailed statistics =========
-0:0001.2/      Time    Gate Pattern     Dur Wires        Type Detail
-0:0001.2/      ----    ------------     --- -----        ---- ------
-0:0001.2/      0.00               I     1.0 0            norm !
-0:0001.2/      0.00               I     1.0 8            norm !
-0:0001.2/      0.00               I     1.0 7            norm !
-0:0001.2/      0.00               I     1.0 6            norm !
-0:0001.2/      0.00               I     1.0 5            norm !
-0:0001.2/      0.00               I     1.0 4            norm !
-0:0001.2/      0.00               I     1.0 3            norm !
-0:0001.2/      0.00               I     1.0 2            norm !
-0:0001.2/      0.00               I     1.0 1            norm !
-0:0001.2/
-0:0001.2/ At round 26, Syndrome measurements: 0 0 1 0 0 0 0 0
-0:0001.3/========== Noise models =========
-0:0001.3/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
-0:0001.3/   ------------   --- ------- ------- ------- ------- ------- -------
-0:0001.3/              I   1.0       9       1       1       0       0       0
-0:0001.3/        AmpDamp   1.0       0       0       0       0       0       0
-0:0001.3/
-0:0001.3/========== Detailed statistics =========
-0:0001.3/      Time    Gate Pattern     Dur Wires        Type Detail
-0:0001.3/      ----    ------------     --- -----        ---- ------
-0:0001.3/      0.00               I     1.0 0            norm !
-0:0001.3/      0.00               I     1.0 8            norm !
-0:0001.3/      0.00               I     1.0 7            norm !
-0:0001.3/      0.00               I     1.0 6            norm !
-0:0001.3/      0.00               I     1.0 5            norm !
-0:0001.3/      0.00               I     1.0 4            norm !
-0:0001.3/      0.00               I     1.0 3            norm !
-0:0001.3/      0.00               I     1.0 2            norm !
-0:0001.3/      0.00               I     1.0 1            norm depol_X
-0:0001.3/
-0:0001.3/ At round 27, Syndrome measurements: 1 0 0 0 0 0 0 0
-0:0001.3/X error on data qubit 1 occurred. Applying fix.
-0:0001.3/========== Noise models =========
-0:0001.3/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
-0:0001.3/   ------------   --- ------- ------- ------- ------- ------- -------
-0:0001.3/              I   1.0       9       0       0       0       0       0
-0:0001.3/        AmpDamp   1.0       1       1       1       0       0       0
-0:0001.3/
-0:0001.3/========== Detailed statistics =========
-0:0001.3/      Time    Gate Pattern     Dur Wires        Type Detail
-0:0001.3/      ----    ------------     --- -----        ---- ------
-0:0001.3/      0.00               I     1.0 0            norm !
-0:0001.3/      0.00               I     1.0 8            norm !
-0:0001.3/      0.00               I     1.0 7            norm !
-0:0001.3/      0.00               I     1.0 6            norm !
-0:0001.3/      0.00         AmpDamp     1.0 6            norm <hard>
-0:0001.3/      0.00               I     1.0 5            norm !
-0:0001.3/      0.00               I     1.0 4            norm !
-0:0001.3/      0.00               I     1.0 3            norm !
-0:0001.3/      0.00               I     1.0 2            norm !
-0:0001.3/      0.00               I     1.0 1            norm !
-0:0001.3/
-0:0001.3/ At round 28, Syndrome measurements: 0 0 1 0 1 0 0 1
-0:0001.3/Z error on data qubits 6 or 7 occurred. Applying fix.
-0:0001.3/X error on data qubit 6 occurred. Applying fix.
-0:0001.4/========== Noise models =========
-0:0001.4/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
-0:0001.4/   ------------   --- ------- ------- ------- ------- ------- -------
-0:0001.4/              I   1.0       9       0       0       0       0       0
-0:0001.4/        AmpDamp   1.0       0       0       0       0       0       0
-0:0001.4/
-0:0001.4/========== Detailed statistics =========
-0:0001.4/      Time    Gate Pattern     Dur Wires        Type Detail
-0:0001.4/      ----    ------------     --- -----        ---- ------
-0:0001.4/      0.00               I     1.0 0            norm !
-0:0001.4/      0.00               I     1.0 8            norm !
-0:0001.4/      0.00               I     1.0 7            norm !
-0:0001.4/      0.00               I     1.0 6            norm !
-0:0001.4/      0.00               I     1.0 5            norm !
-0:0001.4/      0.00               I     1.0 4            norm !
-0:0001.4/      0.00               I     1.0 3            norm !
-0:0001.4/      0.00               I     1.0 2            norm !
-0:0001.4/      0.00               I     1.0 1            norm !
-0:0001.4/
-0:0001.4/ At round 29, Syndrome measurements: 0 0 1 0 0 0 0 0
-0:0001.4/========== Noise models =========
-0:0001.4/   Gate Pattern   Dur G_count G_Apply G_event ECcount ECapply ECevent
-0:0001.4/   ------------   --- ------- ------- ------- ------- ------- -------
-0:0001.4/              I   1.0       9       0       0       0       0       0
-0:0001.4/        AmpDamp   1.0       0       0       0       0       0       0
-0:0001.4/
-0:0001.4/========== Detailed statistics =========
-0:0001.4/      Time    Gate Pattern     Dur Wires        Type Detail
-0:0001.4/      ----    ------------     --- -----        ---- ------
-0:0001.4/      0.00               I     1.0 0            norm !
-0:0001.4/      0.00               I     1.0 8            norm !
-0:0001.4/      0.00               I     1.0 7            norm !
-0:0001.4/      0.00               I     1.0 6            norm !
-0:0001.4/      0.00               I     1.0 5            norm !
-0:0001.4/      0.00               I     1.0 4            norm !
-0:0001.4/      0.00               I     1.0 3            norm !
-0:0001.4/      0.00               I     1.0 2            norm !
-0:0001.4/      0.00               I     1.0 1            norm !
-0:0001.4/
-0:0001.4/ At round 30, Syndrome measurements: 0 0 1 0 0 0 0 0
-0:0001.4/Decoding the Logical State
-0:0001.4/MD1 = 1 and MD7 = 0
-0:0001.4/X needed
-0:0001.4/Doing Tomography (this destroys the surface and leaves only the central data qubit, i.e. you cannot do tomography and carry on with other operations).
-0:0001.4/  Final state of data qubit 4 = 
-0:0001.4/  C_0 = 0.951  ,    C_4096 = -0.309  ,  
-0:0001.4/=============== Logging to: Liquid.log closed ================
+0:0000.8/ At round 7, Syndrome measurements: 1 0 1 0 0 1 0 1
+0:0000.8/Z error on data qubit 2 occurred. Applying fix.
